@@ -590,8 +590,20 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .right-\[-5\%\] {
+    right: -5%;
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .left-5 {
+    left: calc(var(--spacing) * 5);
+  }
+  .left-20 {
+    left: calc(var(--spacing) * 20);
+  }
+  .left-40 {
+    left: calc(var(--spacing) * 40);
   }
   .isolate {
     isolation: isolate;
@@ -707,11 +719,17 @@
       max-width: 96rem !important;
     }
   }
+  .m-9 {
+    margin: calc(var(--spacing) * 9);
+  }
   .mx-auto {
     margin-inline: auto;
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
@@ -845,11 +863,41 @@
   .w-3\/4 {
     width: calc(3/4 * 100%);
   }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-4\/4 {
+    width: calc(4/4 * 100%);
+  }
+  .w-4\/5 {
+    width: calc(4/5 * 100%);
+  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
+  }
+  .w-\[95\%\] {
+    width: 95%;
+  }
+  .w-\[100\%\] {
+    width: 100%;
+  }
+  .w-\[120\%\] {
+    width: 120%;
+  }
+  .w-\[130\%\] {
+    width: 130%;
+  }
+  .w-\[150\%\] {
+    width: 150%;
+  }
+  .w-\[170\%\] {
+    width: 170%;
+  }
+  .w-\[195\%\] {
+    width: 195%;
   }
   .w-full {
     width: 100%;
