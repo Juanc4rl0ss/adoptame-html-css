@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adóptame</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Encabezado principal -->
+    <header class="bg-[#FFF4F4] shadow-md fixed top-0 left-0 w-full z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="../public/img/logo.png" alt="Logo" class="h-10 w-10 mr-2">
+                    <a href="./index.html" class="text-3xl font-bold text-red-500 font-[Quicksand]">Adóptame</a>
+                </div>
+
+                <!-- Menú para escritorio -->
+                <div class="hidden md:flex w-2/3 justify-between">
+                    <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand] py-2">Adoptar</a>
+                    <a href="#" class="text-[#DD174E] font-bold bg-[#FCC1D1] px-4 py-2 rounded-md font-[Quicksand]">Contacto</a>
+                    <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand] py-2">Más Información </a>
+                </div>
+
+                <!-- Ícono de usuario en pantallas grandes -->
+                <div class="hidden md:flex">
+                    <img src="../public/img/user.png" alt="Usuario" class="h-12 w-12">
+                </div>
+
+                <!-- Menú hamburguesa  -->
+                <div class="md:hidden relative w-full flex justify-end">
+                    <!-- Checkbox oculto para manejar el menú -->
+                    <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+                    <!-- Botón hamburguesa alineado a la derecha -->
+                    <label for="menu-toggle" class="cursor-pointer">
+                        <img src="../public/img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
+                    </label>
+
+                    <!-- Menú desplegable en móviles  -->
+                    <div
+                        class="absolute top-full left-0 right-0 mt-3 w-full bg-gray-300 shadow-md hidden peer-checked:flex flex-col">
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Home</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Adoptar</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Info</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Contacto</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Login</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>

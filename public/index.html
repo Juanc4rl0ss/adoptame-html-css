@@ -6,33 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adóptame</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="bg-gray-100">
 
     <!-- Encabezado principal -->
-    <header class="bg-pink-100 shadow-md fixed top-0 left-0 w-full z-50">
+    <header class="bg-[#FFF4F4] shadow-md fixed top-0 left-0 w-full z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
 
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="../src/images/logo.png" alt="Logo" class="h-10 w-10 mr-2">
-                    <a href="#" class="text-3xl font-bold text-red-500">Adóptame</a>
+                    <img src="../public/img/logo.png" alt="Logo" class="h-10 w-10 mr-2">
+                    <a href="#" class="text-3xl font-bold text-red-500 font-[Quicksand]">Adóptame</a>
                 </div>
 
                 <!-- Menú para escritorio -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-800 font-medium hover:text-red-500">Adoptar</a>
-                    <a href="#" class="text-gray-800 font-medium hover:text-red-500">Info</a>
-                    <a href="#" class="text-gray-800 font-medium hover:text-red-500">Contacto</a>
+                <div class="hidden md:flex w-2/3 justify-between">
+                    <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand]">Adoptar</a>
+                    <a href="./contacto.html" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand]">Contacto</a>
+                    <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand] ">Más Información </a>
                 </div>
 
                 <!-- Ícono de usuario en pantallas grandes -->
                 <div class="hidden md:flex">
-                    <img src="../src/images/login.png" alt="Usuario" class="h-12 w-12">
+                    <img src="../public/img/user.png" alt="Usuario" class="h-12 w-12">
                 </div>
 
                 <!-- Menú hamburguesa  -->
@@ -42,17 +42,17 @@
 
                     <!-- Botón hamburguesa alineado a la derecha -->
                     <label for="menu-toggle" class="cursor-pointer">
-                        <img src="../src/images/burger.png" alt="Menú" class="h-10 w-10">
+                        <img src="../public/img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
                     </label>
 
                     <!-- Menú desplegable en móviles  -->
                     <div
                         class="absolute top-full left-0 right-0 mt-3 w-full bg-gray-300 shadow-md hidden peer-checked:flex flex-col">
-                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:bg-gray-400">Home</a>
-                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:bg-gray-400">Adoptar</a>
-                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:bg-gray-400">Info</a>
-                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:bg-gray-400">Contacto</a>
-                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:bg-gray-400">Login</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Home</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Adoptar</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Info</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Contacto</a>
+                        <a href="#" class="block text-gray-800 font-medium py-2 px-4 hover:text-[#DD174E]">Login</a>
                     </div>
                 </div>
 
