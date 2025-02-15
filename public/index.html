@@ -17,25 +17,30 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
 
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <img src="../public/img/logo.png" alt="Logo" class="h-10 w-10 mr-2">
-                    <a href="#" class="text-3xl font-bold text-red-500 font-[Quicksand]">Adóptame</a>
-                </div>
-
                 <!-- Menú para escritorio -->
-                <div class="hidden md:flex w-2/3 justify-between">
-                    <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand]">Adoptar</a>
-                    <a href="./contacto.html"
-                        class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand]">Contacto</a>
-                    <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand] ">Más Información
-                    </a>
+                <!-- Menú para escritorio -->
+                <div class="flex items-center justify-between w-full px-6">
+                    <!-- Logo alineado a la izquierda -->
+                    <div class="flex items-center">
+                        <img src="../public/img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
+                        <a href="#" class="text-3xl font-bold text-red-500 font-[Quicksand]">Adóptame</a>
+                    </div>
+
+                    <!-- Menú para escritorio, centrado con separación uniforme -->
+                    <nav class="hidden md:flex flex-grow justify-evenly">
+                        <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand]">Adoptar</a>
+                        <a href="./contacto.html"
+                            class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand]">Contacto</a>
+                        <a href="#" class="text-gray-800 font-bold hover:text-[#DD174E] font-[Quicksand]">Más
+                            Información</a>
+                    </nav>
+
+                    <!-- Ícono de usuario alineado a la derecha -->
+                    <div class="hidden md:flex">
+                        <img src="../public/img/user.png" alt="Usuario" class="h-12 w-auto">
+                    </div>
                 </div>
 
-                <!-- Ícono de usuario en pantallas grandes -->
-                <div class="hidden md:flex">
-                    <img src="../public/img/user.png" alt="Usuario" class="h-12 w-12">
-                </div>
 
                 <!-- Menú hamburguesa  -->
                 <div class="md:hidden relative w-full flex justify-end">
@@ -49,7 +54,7 @@
 
                     <!-- Menú desplegable en móviles -->
                     <div
-                        class="absolute top-full right-[-5%] w-[170%] bg-[#FFF4F4] shadow-md hidden peer-checked:flex flex-col items-end mt-3">
+                        class="absolute top-full right-[-8%] w-[240%] bg-[#FFF4F4] shadow-md hidden peer-checked:flex flex-col items-end mt-3">
                         <a href="#"
                             class="block font-[Quicksand] text-gray-800 font-bold py-2 px-4 text-right hover:text-[#DD174E]">Home</a>
                         <a href="#"
