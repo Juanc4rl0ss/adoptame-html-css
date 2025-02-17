@@ -374,6 +374,13 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-main-white: #ffffff;
+    --color-main-light0: #fff4f4;
+    --color-main-light1: #f5e7eb;
+    --color-main-pink: #fcc1d1;
+    --color-main-fuchsia: #dd174e;
+    --color-main-dark: #362d2d;
+    --color-main-green: #a3d9a5;
   }
 }
 @layer base {
@@ -790,9 +797,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -1419,8 +1423,8 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
+  .bg-main-light0 {
+    background-color: var(--color-main-light0);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);

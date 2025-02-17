@@ -1,2 +1,11 @@
 @import "tailwindcss";
 /* Generar css: npm run dev */
+@theme {
+    --color-main-white: #ffffff; /*Blanco: Interior de los elementos del formulario*/
+    --color-main-light0: #fff4f4; /*Crema muy claro: Color de fondo general de la página*/
+    --color-main-light1: #f5e7eb; /*Crema claro: Fondo de los recuadros de las secciones principales*/
+    --color-main-pink: #fcc1d1; /*Rosa: Fondo del menú seleccionado, footer, etiquetas <a> y remarcado de secciones (elementos del formulario)*/
+    --color-main-fuchsia: #dd174e; /*Fucsia: Logos, separadores y selecciones*/
+    --color-main-dark: #362d2d; /*Marron oscuro: Texto, iconos*/
+    --color-main-green: #a3d9a5; /*Verde: Botones*/
+}
