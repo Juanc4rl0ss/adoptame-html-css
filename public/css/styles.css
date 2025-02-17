@@ -1,4 +1,5 @@
 /*! tailwindcss v4.0.6 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Quicksand:wght@300..700&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -381,6 +382,9 @@
     --color-main-fuchsia: #dd174e;
     --color-main-dark: #362d2d;
     --color-main-green: #a3d9a5;
+    --color-main-lightgreen: #bfdbc0;
+    --font-main-barlow: 'Barlow' , sans-serif;
+    --font-main-quicksand: 'Quicksand' , sans-serif;
   }
 }
 @layer base {
@@ -797,6 +801,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -1423,8 +1430,11 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-main-light0 {
-    background-color: var(--color-main-light0);
+  .bg-main-green {
+    background-color: var(--color-main-green);
+  }
+  .bg-main-lightgreen {
+    background-color: var(--color-main-lightgreen);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1645,6 +1655,12 @@
   }
   .align-top {
     vertical-align: top;
+  }
+  .font-main-barlow {
+    font-family: var(--font-main-barlow);
+  }
+  .font-main-quicksand {
+    font-family: var(--font-main-quicksand);
   }
   .text-3xl {
     font-size: var(--text-3xl);
