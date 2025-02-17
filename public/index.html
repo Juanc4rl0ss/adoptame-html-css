@@ -9,12 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" src="css/styles.css"/>
   </head>
 
-  <body class="bg-[#FFF4F4]">
+  <body class="bg-main-light0 text-main-dark">
     
     <!-- Contenido de la página -->
-    <main class="items-center text-center text-[#362D2D]">
+    <main class="items-center text-center">
       <!-- Banner principal -->
       <section>
         <img
@@ -25,18 +26,22 @@
       </section>
 
       <!-- Primera sección -->
-      <section class="bg-[#F5E7EB] w-4/5 mx-auto my-8 p-6 rounded-lg">
-        <div class="flex flex-col md:flex-row gap-16">
+      <section class="bg-[#F5E7EB] w-11/12 sm:w-4/5 mx-auto my-8 p-6 rounded-lg">
+        <div class="flex flex-col sm:flex-row gap-16">
           <!-- Imagen -->
-          <img
-            src="img/seccion-adoptar.png"
-            alt="Mano sosteniendo una pata"
-            class="object-cover rounded-lg md:w-full md:h-72"
-          />
+          <picture>
+            <source srcset="img/seccion-adoptar-movil.png" media="(max-width: 768px)">
+            <source srcset="img/seccion-adoptar.png" media="(min-width: 769px)">
+            <img
+              src="img/seccion-adoptar.png"
+              alt="Mano sosteniendo una pata"
+              class="object-cover rounded-lg w-full h-full"
+            />
+          </picture>
 
           <!-- Contenido -->
-          <div class="text-[#362D2D] mx-auto pl-40 pr-40">
-            <h2 class="font-medium mb-4 md:text-xl lg:text-2xl">
+          <div class="text-[#362D2D] mx-auto sm:pl-10 sm:pr-10 md:pr-40 md:pl-40">
+            <h2 class="font-medium mb-4 text-2xl md:text-xl lg:text-2xl">
               Nunca compres, adopta
             </h2>
             <p class="font-awesome-5 text-left md:text-sm lg:text-lg">
@@ -47,7 +52,7 @@
               la diferencia y sé parte del cambio!
             </p>
             <!-- Botón -->
-            <a href="#">
+            <a href="informacion.html">
               <button
                 class="mt-4 px-6 py-2 bg-[#A3D9A5] text-[#362D2D] font-quicksand font-bold rounded-lg hover:bg-green-400 transition md:text-lg lg:txt-xl"
               >
@@ -59,23 +64,23 @@
       </section>
 
       <!-- Separación entre secciones -->
-      <div class="border-t-2 border-[#DD174E] ml-12 mr-12"></div>
+      <div class="border-t-2 border-main-fuchsia mx-4 md:mx-12"></div>
 
       <!-- Sección 2 - Selección de animales -->
-      <section class="bg-[#F5E7EB] w-2/5 mx-auto my-8 p-10 rounded-lg">
-        <h2 class="font-medium mb-10 md:text-xl lg:text-2xl">
+      <section class="bg-[#F5E7EB] w-11/12 md:w-2/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
+        <h2 class="font-medium font-main-quicksand mb-6 text-2xl md:text-xl lg:text-2xl">
           Escoge a tu animal de compañía
         </h2>
-        <div class="flex justify-center space-x-40 flex-wrap font-awesome-5">
-          <a href="#">
+        <div class="flex justify-center space-x-6 md:space-x-20 lg:space-x-40 flex-wrap font-main-barlow">
+          <a href="adoptar.html">
             <span class="mb-4 block">Perro</span>
-            <img src="img/perro.png" alt="Perro" />
+            <img src="img/perro.png" alt="Perro"/>
           </a>
-          <a href="#">
+          <a href="adoptar.html">
             <span class="mb-4 block">Gato</span>
             <img src="img/gato.png" alt="Gato" />
           </a>
-          <a href="#">
+          <a href="adoptar.html">
             <span class="mb-4 block">Otros...</span>
             <img src="img/otros.png" alt="Otros" />
           </a>
@@ -83,18 +88,18 @@
       </section>
 
       <!-- Separación entre secciones -->
-      <div class="border-t-2 border-[#DD174E] ml-12 mr-12"></div>
+      <div class="border-t-2 border-main-fuchsia mx-4 md:mx-12"></div>
 
       <!-- Sección 3 - Pasos para adoptar -->
-      <section class="bg-[#F5E7EB] w-3/5 mx-auto my-8 p-10 rounded-lg">
-        <h2 class="font-medium mb-4 md:text-xl lg:text-2xl">
+      <section class="bg-[#F5E7EB] w-11/12 md:w-3/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
+        <h2 class="font-medium font-main-quicksand mb-4 text-2xl md:text-xl lg:text-2xl">
           Pasos para adoptar un animal
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-40 mt-10 ml-10 mr-10">
           <div class="bg-[#FFF4F4] p-4 rounded-lg">
-            <h3 class="font-bold md:text-lg lg:text-xl">Paso 1</h3>
-            <p class="mt-4 md:text-sm lg:text-lg">Inicia sesión</p>
-            <p class="mt-4 md:text-xs lg:text-sm">
+            <h3 class="font-bold font-main-quicksand md:text-lg lg:text-xl">Paso 1</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Inicia sesión</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
               Accede a tu cuenta o regístrate para empezar tu proceso de
               adopción.
             </p>
@@ -105,9 +110,9 @@
             />
           </div>
           <div class="bg-[#FFF4F4] p-4 rounded-lg">
-            <h3 class="font-bold md:text-lg lg:text-xl">Paso 2</h3>
-            <p class="mt-4 md:text-sm lg:text-lg">Usa los filtros</p>
-            <p class="mt-4 md:text-xs lg:text-sm">
+            <h3 class="font-bold font-main-quicksand md:text-lg lg:text-xl">Paso 2</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Usa los filtros</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
               Filtra por especie, tamaño o edad para encontrar tu compañero
               ideal.
             </p>
@@ -120,9 +125,9 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-40 mt-20 ml-10 mr-10">
           <div class="bg-[#FFF4F4] p-4 rounded-lg">
-            <h3 class="font-bold md:text-lg lg:text-xl">Paso 3</h3>
-            <p class="mt-4 md:text-sm lg:text-lg">Rellena el Formulario</p>
-            <p class="mt-4 md:text-xs lg:text-sm">
+            <h3 class="font-bold font-main-quicksand md:text-lg lg:text-xl">Paso 3</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Rellena el Formulario</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
               Completa tus datos y detalles sobre tu hogar.
             </p>
             <img
@@ -132,9 +137,9 @@
             />
           </div>
           <div class="bg-[#FFF4F4] p-4 rounded-lg">
-            <h3 class="font-bold md:text-lg lg:text-xl">Paso 4</h3>
-            <p class="mt-4 md:text-sm lg:text-lg">Espera Respuesta</p>
-            <p class="mt-4 md:text-xs lg:text-sm">
+            <h3 class="font-bold font-main-quicksand md:text-lg lg:text-xl">Paso 4</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Espera Respuesta</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
               Revisaremos tu solicitud y te contactaremos pronto.
             </p>
             <img
