@@ -10,59 +10,80 @@
     <header><!-- TODO: Añadir el header --></header>
 
     <main class="bg-main-light0 text-main-dark font-main-barlow pt-8 pb-8 pl-4 pr-4">
-        <div class="w-auto xl:w-280 lg:w-250 p-6 bg-main-light1 rounded-lg mx-auto grid grid-cols-2 gap-4">
-            <h1 class="text-4xl font-main-quicksand font-bold text-center pb-4 pt-4 text-main-fuchsia col-span-2">CONOCE MÁS SOBRE ODIE</h1>
+        <div class="w-auto xl:w-280 lg:w-250 p-6 bg-main-light1 rounded-lg mx-auto grid grid-cols-2 gap-x-8 gap-y-16 pl-8 pr-8">
+            
             
             <!-- Sección de imágenes -->
-            <section class="flex gap-8 justify-center flex-wrap col-span-2">
-                <img class="w-80 h-80 xl:w-100 xl:h-100 object-cover rounded-lg" src="img/adoptar-gato2.jpg" alt="Foto de Odie">
-                <img class="w-80 h-80 xl:w-100 xl:h-100 object-cover rounded-lg" src="img/adoptar-gato3.jpg" alt="Foto de Odie">
+            <section class="col-span-2">
+                <h1 class="text-4xl font-main-quicksand font-bold text-center pb-8 pt-4 text-main-fuchsia col-span-2">CONOCE MÁS SOBRE ODIE</h1>
+                <div class="flex gap-8 justify-center flex-wrap">
+                    <img class="w-80 h-80 xl:w-100 xl:h-100 object-cover rounded-lg" src="img/adoptar-gato2.jpg" alt="Foto de Odie">
+                    <img class="w-80 h-80 xl:w-100 xl:h-100 object-cover rounded-lg" src="img/adoptar-gato3.jpg" alt="Foto de Odie">
+                </div>
             </section>
 
             <!-- Información de Mascota -->
-            <section class="mt-8 ml-8 mr-4">
+            <section>
                 <h2 class="text-3xl font-main-quicksand font-bold text-main-fuchsia">Odie</h2>
                 <p class="mt-4 text-lg">Odie es un gatito muy sociable con las personas, le encanta jugar y, sobre todo, que le den muchos mimos y cariño.</p>
                 <p class="mt-4 text-lg">Necesita un adoptante que le dedique tiempo y le brinde todo el amor que se merece.</p>
-                <button class="align-middle mt-6 bg-main-green font-main-quicksand font-bold text-xl rounded-lg hover:bg-main-lightgreen  cursor-pointer">
+                <button class="mx-auto block w-48 h-11 mt-6 bg-main-green font-main-quicksand font-bold text-xl rounded-lg hover:bg-main-lightgreen  cursor-pointer">
                     ¡Quiero Adoptar!
                 </button>
             </section>
 
-            <!-- Menú de información -->
+            <!-- Menú información -->
             <aside>
                 <nav>
-                    <div>Datos</div>
-                    <div>Historia</div>
-                    <div>Entrega</div>
-                    <div>Compatibilidad</div>
+                    <ul>
+                        <li class="grid grid-cols-2">
+                            <p class="font-main-quicksand font-bold text-lg">DATOS</p>
+                            <span class="material-symbols-outlined text-right text-main-fuchsia">add</span>
+                            <hr class="col-span-2 border-t-3 rounded-full text-main-fuchsia">
+                        </li>
+                        <li class="grid grid-cols-2 mt-6">
+                            <p class="font-main-quicksand font-bold text-lg">HISTORIA</p>
+                            <span class="material-symbols-outlined text-right text-main-fuchsia">add</span>
+                            <hr class="col-span-2 border-t-3 rounded-full text-main-fuchsia">
+                        </li>
+                        <li class="grid grid-cols-2 mt-6">
+                            <p class="font-main-quicksand font-bold text-lg">ENTREGA</p>
+                            <span class="material-symbols-outlined text-right text-main-fuchsia">add</span>
+                            <hr class="col-span-2 border-t-3 rounded-full text-main-fuchsia">
+                        </li>
+                        <li class="grid grid-cols-2 mt-6">
+                            <p class="font-main-quicksand font-bold text-lg">COMPATIBILIDAD</p>
+                            <span class="material-symbols-outlined text-right text-main-fuchsia">add</span>
+                            <hr class="col-span-2 border-t-3 rounded-full text-main-fuchsia">
+                        </li>
+                    </ul>
                 </nav>
             </aside>
 
             <!-- Sección de animales similares -->
-            <section>
-                <h2>Animales similares</h2>
-                <div>
+            <section class="col-span-2">
+                <h2 class="text-2xl font-semibold text-center">Animales similares</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    <article>
-                        <img src="img/adoptar-gato2.jpg" alt="Foto de Cyro">
-                        <h3>Cyro</h3>
-                        <img src="img/chico.png" alt="Icono Macho">
-                        <button>Adóptame</button>
+                    <article class="bg-main-light0 rounded-lg text-center">
+                        <img class="w-full h-48 mx-auto" src="img/adoptar-gato2.jpg" alt="Foto de Cyro">
+                        <h3 class="text-lg">Cyro</h3>
+                        <img class="mx-auto" src="img/chico.png" alt="Icono Macho">
+                        <button class="bg-main-green text-white rounded-lg">Adóptame</button>
                     </article>
 
-                    <article>
-                        <img src="img/adoptar-gato2.jpg" alt="Foto de Frodo">
-                        <h3>Frodo</h3>
-                        <img alt="Icono Macho">
-                        <button>Adóptame</button>
+                    <article class="bg-main-light0 rounded-lg text-center">
+                        <img class="w-full h-48 mx-auto" src="img/adoptar-gato2.jpg" alt="Foto de Cyro">
+                        <h3 class="text-lg">Cyro</h3>
+                        <img class="mx-auto" src="img/chico.png" alt="Icono Macho">
+                        <button class="bg-main-green text-white rounded-lg">Adóptame</button>
                     </article>
-
-                    <article>
-                        <img src="img/adoptar-gato2.jpg" alt="Foto de Alvin">
-                        <h3>Alvin</h3>
-                        <img src="img/chico.png" alt="Icono Macho">
-                        <button>Adóptame</button>
+                    
+                    <article class="bg-main-light0 rounded-lg text-center">
+                        <img class="w-full h-48 mx-auto" src="img/adoptar-gato2.jpg" alt="Foto de Cyro">
+                        <h3 class="text-lg">Cyro</h3>
+                        <img class="mx-auto" src="img/chico.png" alt="Icono Macho">
+                        <button class="bg-main-green text-white rounded-lg">Adóptame</button>
                     </article>
                 </div>
             </section>
