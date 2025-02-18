@@ -718,6 +718,9 @@
       max-width: 96rem !important;
     }
   }
+  .m-9 {
+    margin: calc(var(--spacing) * 9);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -1478,23 +1481,11 @@
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
   }
-  .bg-\[\#FCC1D1\] {
-    background-color: #FCC1D1;
-  }
-  .bg-\[\#FFF4F4\] {
-    background-color: #FFF4F4;
-  }
-  .bg-\[--color-main-light0\] {
-    background-color: --color-main-light0;
-  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
-  }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
   }
   .bg-main-light0 {
     background-color: var(--color-main-light0);
@@ -1731,9 +1722,6 @@
   .align-top {
     vertical-align: top;
   }
-  .font-\[Quicksand\] {
-    font-family: Quicksand;
-  }
   .font-main-quicksand {
     font-family: var(--font-main-quicksand);
   }
@@ -1821,12 +1809,6 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
-  }
-  .text-\[\#DD174E\] {
-    color: #DD174E;
-  }
-  .text-\[--color-main-fuchsia\] {
-    color: --color-main-fuchsia;
   }
   .text-gray-800 {
     color: var(--color-gray-800);
@@ -2290,20 +2272,6 @@
   .peer-checked\:flex {
     &:is(:where(.peer):checked ~ *) {
       display: flex;
-    }
-  }
-  .hover\:text-\[\#DD174E\] {
-    &:hover {
-      @media (hover: hover) {
-        color: #DD174E;
-      }
-    }
-  }
-  .hover\:text-\[--color-main-fuchsia\] {
-    &:hover {
-      @media (hover: hover) {
-        color: --color-main-fuchsia;
-      }
     }
   }
   .hover\:text-main-fuchsia {
