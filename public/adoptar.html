@@ -3,12 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adóptame | Adoptar</title>
+    <link rel="icon" type="favicon.ico" href="img/favicon.ico">
+    <title>Adoptar | Adóptame</title>
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
 
   <body class="bg-main-light0 text-main-dark font-main-barlow">
-    
+    <!-- Encabezado principal -->
+    <header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div class="flex justify-between items-center h-16">
+
+              <!-- Menú para escritorio -->
+              <div class="flex items-center justify-between w-full px-6">
+                  <!-- Logo alineado a la izquierda -->
+                  <div class="flex items-center">
+                      <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
+                      <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
+                  </div>
+
+                  <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
+                      <a href="adoptar.html" class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a>
+                      <a href="contacto.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Contacto</a>
+                      <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
+                      <!-- <a href="#"
+                          class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                      <!-- <a href="./adoptar.html"
+                          class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a> -->
+                      <a href="informacion.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2">Más Información</a>
+
+                      <!-- <a href="#"
+                          class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a> -->
+                  </nav>
+                  
+
+                  <!-- Ícono de usuario alineado a la derecha -->
+                  <div class="hidden md:flex">
+                      <img src="img/user.png" alt="Usuario" class="h-12 w-auto">
+                  </div>
+              </div>
+
+
+              <!-- Menú hamburguesa  -->
+              <div class="md:hidden relative w-full flex justify-end">
+                  <!-- Checkbox oculto para manejar el menú -->
+                  <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+                  <!-- Botón hamburguesa alineado a la derecha -->
+                  <label for="menu-toggle" class="cursor-pointer">
+                      <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
+                  </label>
+
+                  <!-- Menú desplegable en móviles -->
+                  <div#
+                      class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3">
+                      <a href="adoptar.html"
+                      class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a>
+                      <a href="contacto.html"
+                          class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Contacto</a>
+                      <!-- SELECTED <a href="#"
+                          class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                      <a href="informacion.html"
+                          class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Más
+                          Información</a>
+                      <a href="login.html"
+                          class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar sesión</a>
+                  </div#>
+
+              </div>
+
+          </div>
+      </nav>
+  </header>
     <!-- Contenido página adoptar -->
     <main class="items-center text-center">
       <section class="bg-main-light1 w-11/12 lg:w-9/10 xl:w-4/5 mx-auto my-8 mt-24 p-6 rounded-lg">
@@ -436,6 +502,66 @@
         </div>
       </section>
     </main>
-
+    <footer class="w-full bg-main-pink py-8 mt-auto text-main-dark text-center">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20">
+  
+              <!-- Sobre Nosotros -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Sobre nosotros
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestros métodos</a></li>
+                      <li><a href="contacto.html" class="hover:underline font-main-barlow">Contacto</a></li>
+                  </ul>
+              </div>
+  
+              <!-- Servicios -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Servicios
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Rescate de animales</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Educación ambiental</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Voluntariado</a></li>
+                  </ul>
+              </div>
+  
+              <!-- Proyectos -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Proyectos
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Especies en peligro</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Adopciones responsables</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Apadrinamiento</a></li>
+                  </ul>
+              </div>
+  
+              <!-- Síguenos -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Síguenos
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Contenido</a></li>
+                  </ul>
+  
+                  <!-- Iconos redes sociales -->
+                  <div class="mt-2 text-xl space-x-4">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
   </body>
 </html>
