@@ -14,15 +14,19 @@
     <main class="items-center text-center">
       <!-- Banner principal -->
       <section class="relative">
-        <img
-          src="img/banner.png"
-          alt="Banner"
-          class="w-full h-72 object-cover mx-auto"
-        />
+        <picture>
+          <source srcset="img/banner-movil.png" media="(max-width: 768px)">
+          <source srcset="img/banner.png" media="(min-width: 769px)">
+          <img
+            src="img/banner.png"
+            alt="Banner"
+            class="w-full h-72 object-cover mx-auto"
+          />
+        </picture>
       </section>
 
       <!-- Primera sección -->
-      <section class="bg-[#F5E7EB] w-11/12 sm:w-4/5 mx-auto my-8 p-6 rounded-lg absolute md:relative md:top-0 md:left-0 md:-translate-x-1 top-40 left-1/2 -translate-x-1/2">
+      <section class="bg-main-light1 w-11/12 sm:w-4/5 mx-auto my-8 p-6 rounded-lg absolute md:relative md:top-0 md:left-0 md:-translate-x-1 top-40 left-1/2 -translate-x-1/2">
         <div class="flex flex-col items-center sm:flex-row gap-6 sm:gap-16">
           <!-- Imagen -->
           <picture class="md:w-full w-full justify-center sm:justify-start">
@@ -36,11 +40,11 @@
           </picture>
 
           <!-- Contenido -->
-          <div class="text-[#362D2D] mx-auto sm:pl-10 sm:pr-10 md:pr-40 md:pl-40">
-            <h2 class="font-medium mb-4 text-2xl md:text-xl lg:text-2xl">
+          <div class="mx-auto sm:pl-10 sm:pr-10 md:pr-40 md:pl-40">
+            <h2 class="font-main-quicksand font-medium mb-4 text-2xl md:text-xl lg:text-2xl">
               Nunca compres, adopta
             </h2>
-            <p class="font-awesome-5 text-left md:text-sm lg:text-lg">
+            <p class="font-main-barlow text-left md:text-sm lg:text-lg">
               Cada año, millones de animales buscan un hogar lleno de amor.
               Adoptar no solo salva una vida, también llena la tuya de cariño y
               gratitud. Cuando eliges adoptar, das una oportunidad a un ser que
@@ -50,7 +54,7 @@
             <!-- Botón -->
             <a href="informacion.html">
               <button
-                class="mt-4 px-6 py-2 bg-[#A3D9A5] text-[#362D2D] font-quicksand font-bold rounded-lg hover:bg-green-400 transition md:text-lg lg:txt-xl"
+                class="mt-4 px-6 py-2 bg-main-green font-main-quicksand font-bold rounded-lg hover:bg-main-lightgreen transition md:text-lg lg:txt-xl"
               >
                 Ver más
               </button>
@@ -66,7 +70,7 @@
       <div class="border-t-2 border-main-fuchsia mx-4 md:mx-12 mt-10 sm:mt-0"></div>
 
       <!-- Sección 2 - Selección de animales -->
-      <section class="bg-[#F5E7EB] w-11/12 md:w-2/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
+      <section class="bg-main-light1 w-11/12 md:w-2/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
         <h2 class="font-medium font-main-quicksand mb-6 text-2xl md:text-xl lg:text-2xl">
           Escoge a tu animal de compañía
         </h2>
@@ -90,12 +94,12 @@
       <div class="border-t-2 border-main-fuchsia mx-4 md:mx-12"></div>
 
       <!-- Sección 3 - Pasos para adoptar -->
-      <section class="bg-[#F5E7EB] w-11/12 md:w-3/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
+      <section class="bg-main-light1 w-11/12 md:w-3/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
         <h2 class="font-medium font-main-quicksand mb-4 text-2xl md:text-xl lg:text-2xl">
           Pasos para adoptar un animal
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-40 mt-10 ml-10 mr-10">
-          <div class="bg-[#FFF4F4] p-4 rounded-lg">
+          <div class="bg-main-light0 p-4 rounded-lg">
             <h3 class="font-bold font-main-quicksand text-xl">Paso 1</h3>
             <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Inicia sesión</p>
             <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
@@ -108,7 +112,7 @@
               class="mx-auto block mt-5"
             />
           </div>
-          <div class="bg-[#FFF4F4] p-4 rounded-lg">
+          <div class="bg-main-light0 p-4 rounded-lg">
             <h3 class="font-bold font-main-quicksand text-xl">Paso 2</h3>
             <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Usa los filtros</p>
             <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
@@ -123,7 +127,7 @@
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-40 mt-10 md:mt-20 ml-10 mr-10">
-          <div class="bg-[#FFF4F4] p-4 rounded-lg">
+          <div class="bg-main-light0 p-4 rounded-lg">
             <h3 class="font-bold font-main-quicksand text-xl">Paso 3</h3>
             <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Rellena el Formulario</p>
             <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
@@ -135,7 +139,7 @@
               class="mx-auto block mt-5"
             />
           </div>
-          <div class="bg-[#FFF4F4] p-4 rounded-lg">
+          <div class="bg-main-light0 p-4 rounded-lg">
             <h3 class="font-bold font-main-quicksand text-xl">Paso 4</h3>
             <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Espera Respuesta</p>
             <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
