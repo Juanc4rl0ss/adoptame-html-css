@@ -1,17 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adóptame | Adoptar</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adóptame</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <body class="bg-main-light0 text-main-dark font-main-barlow">
+    
+    <!-- Contenido página adoptar -->
+    <main class="items-center text-center">
+      <section class="bg-main-light1 w-11/12 lg:w-9/10 xl:w-4/5 mx-auto my-8 mt-24 p-6 rounded-lg">
+        <h1 class="font-bold font-main-quicksand text-3xl lg:text-4xl">Adopta un animal</h1>
+        <p class="text-left text-lg mt-5 ml-10">Filtra tu mascota ideal:</p>
 
-</head>
+        <!-- Filtrar animal -->
+        <div class="flex flex-wrap justify-center mt-4 gap-4 md:gap-20 font-main-barlow">
+          <select
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
+          >
+            <option class="bg-main-pink" value="" disabled selected>Especie</option>
+            <option class="bg-main-light1" value="gatos">Gatos</option>
+            <option class="bg-main-pink" value="perros">Perros</option>
+            <option class="bg-main-light1" value="otros">Otros</option>
+          </select>
+          <select
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
+          >
+            <option class="bg-main-pink" value="" disabled selected>Tamaño</option>
+            <option class="bg-main-light1" value="pequeño">Pequeño</option>
+            <option class="bg-main-pink" value="mediano">Mediano</option>
+            <option class="bg-main-light1" value="grande">Grande</option>
+          </select>
+          <select
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
+          >
+            <option class="bg-main-pink" value="" disabled selected>Edad</option>
+            <option class="bg-main-light1" value="cria">Cría</option>
+            <option class="bg-main-pink" value="joven">Joven</option>
+            <option class="bg-main-light1" value="adulto">Adulto</option>
+          </select>
+          <select
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
+          >
+            <option class="bg-main-pink" value="" disabled selected>Sexo</option>
+            <option class="bg-main-light1" value="macho">Macho</option>
+            <option class="bg-main-pink" value="hembra">Hembra</option>
+          </select>
+          <button
+            class="px-6 py-1 bg-main-green font-quicksand font-bold rounded-lg hover:bg-main-lightgreen transition md:text-lg lg:txt-xl w-1/2 md:w-auto cursor-pointer"
+          >
+            Buscar
+          </button>
+        </div>
 
-<body>
-   
-</body>
+        <div class="mt-10">
+          <h2 class="font-main-quicksand font-bold text-main-fuchsia text-2xl md:text-3xl lg:text-4xl mb-5">
+            Gatos para adoptar
+          </h2>
+          <div class="relative w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 mt-4 pl-16 pr-16">
+              <div class="bg-main-light0">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/OdieA_sm.jpg" media="(max-width: 768px)">
+                    <source srcset="img/OdieA_lg.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/OdieA_lg.jpg"
+                      alt="Odie"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
 
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Odie</h3>
+                    <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
+                  </div>
+
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-main-light0 rounded hidden md:block">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-gato2-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-gato2.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-gato2.jpg"
+                      alt="Lili"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Lili</h3>
+                    <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-main-light0 rounded hidden xl:block">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-gato3-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-gato3.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-gato3.jpg"
+                      alt="Austin"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Austin</h3>
+                    <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="cursor-pointer bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="absolute w-6 top-1/2 right-4 md:w-auto md:right-0">
+              <img src="img/scroll-derecha.png" alt="Scroll" class="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <h2 class="font-main-quicksand font-bold text-main-fuchsia text-2xl md:text-3xl lg:text-4xl mb-5">
+            Perros para adoptar
+          </h2>
+          <div class="relative w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 mt-4 pl-16 pr-16">
+              <div class="bg-main-light0 rounded">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-perro1-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-perro1.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-perro1.jpg"
+                      alt="Mat"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Mat</h3>
+                    <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-main-light0 rounded hidden md:block">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-perro2-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-perro2.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-perro2.jpg"
+                      alt="Xena"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Xena</h3>
+                    <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-main-light0 rounded hidden xl:block">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-perro3-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-perro3.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-perro3.jpg"
+                      alt="Senda"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Senda</h3>
+                    <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="absolute w-6 top-1/2 right-4 md:w-auto md:right-0">
+              <img src="img/scroll-derecha.png" alt="Scroll" class="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-10 mb-10">
+          <h2 class="font-bold font-main-quicksand text-main-fuchsia text-2xl md:text-3xl lg:text-4xl mb-5">
+            Otro tipo de mascotas
+          </h2>
+          <div class="relative w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 mt-4 pl-16 pr-16">
+              <div class="bg-main-light0 rounded">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-otro-animal1-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-otro-animal1.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-otro-animal1.jpg"
+                      alt="Huri"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Huri</h3>
+                    <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-main-light0 rounded hidden md:block">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-otro-animal2-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-otro-animal2.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-otro-animal2.jpg"
+                      alt="Melon"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Melon</h3>
+                    <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-main-light0 rounded hidden xl:block">
+                <div class="relative">
+                  <picture>
+                    <source srcset="img/adoptar-otro-animal3-movil.jpg" media="(max-width: 768px)">
+                    <source srcset="img/adoptar-otro-animal3.jpg" media="(min-width: 769px)">
+                    <img
+                      src="img/adoptar-otro-animal3.jpg"
+                      alt="Tazo"
+                      class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
+                    />
+                  </picture>
+
+                  <div
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
+                  >
+                    <img
+                      src="img/favorito.png"
+                      alt="Favorito"
+                      class="w-7 h-7 opacity-100"
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-4">
+                  <div class="flex items-center">
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Tazo</h3>
+                    <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
+                  </div>
+                  <div class="md:mr-4">
+                    <a href="detalles-animal.html">
+                      <button
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
+                      >
+                        Adóptame
+                      </button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="absolute w-6 top-1/2 right-4 md:w-auto md:right-0">
+              <img src="img/scroll-derecha.png" alt="Scroll" class="" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
 </html>
