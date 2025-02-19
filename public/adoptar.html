@@ -11,63 +11,74 @@
     />
   </head>
 
-  <body class="bg-[#FFF4F4] text-[#362D2D]">
+  <body class="bg-main-light0 text-main-dark">
     
     <!-- Contenido página adoptar -->
     <main class="items-center text-center">
-      <section class="bg-[#F5E7EB] w-11/12 md:w-3/5 lg:w-4/5 mx-auto my-8 mt-24 p-6 rounded-lg">
+      <section class="bg-main-light1 w-11/12 md:w-3/5 lg:w-4/5 mx-auto my-8 mt-24 p-6 rounded-lg">
         <h1 class="font-semibold text-2xl lg:text-3xl">Adopta un animal</h1>
         <p class="text-left mt-5 ml-10">Filtra tu mascota ideal:</p>
 
         <!-- Filtrar animal -->
-        <div class="flex flex-wrap justify-center mt-4 gap-4 md:gap-20">
+        <div class="flex flex-wrap justify-center mt-4 gap-4 md:gap-20 font-main-barlow">
           <select
-            class="border border-[#DD174E] rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
           >
-            <option>Especie</option>
+            <option class="bg-main-pink" value="" disabled selected>Especie</option>
+            <option class="bg-main-light1" value="gatos">Gatos</option>
+            <option class="bg-main-pink" value="perros">Perros</option>
+            <option class="bg-main-light1" value="otros">Otros</option>
           </select>
           <select
-            class="border border-[#DD174E] rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
           >
-            <option class="">Tamaño</option>
+            <option class="bg-main-pink" value="" disabled selected>Tamaño</option>
+            <option class="bg-main-light1" value="pequeño">Pequeño</option>
+            <option class="bg-main-pink" value="mediano">Mediano</option>
+            <option class="bg-main-light1" value="grande">Grande</option>
           </select>
           <select
-            class="border border-[#DD174E] rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
           >
-            <option>Edad</option>
+            <option class="bg-main-pink" value="" disabled selected>Edad</option>
+            <option class="bg-main-light1" value="cria">Cría</option>
+            <option class="bg-main-pink" value="joven">Joven</option>
+            <option class="bg-main-light1" value="adulto">Adulto</option>
           </select>
           <select
-            class="border border-[#DD174E] rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
           >
-            <option>Sexo</option>
+            <option class="bg-main-pink" value="" disabled selected>Sexo</option>
+            <option class="bg-main-light1" value="macho">Macho</option>
+            <option class="bg-main-pink" value="hembra">Hembra</option>
           </select>
           <button
-            class="px-6 py-1 bg-[#A3D9A5] text-[#362D2D] font-quicksand font-bold rounded-lg hover:bg-green-400 transition md:text-lg lg:txt-xl w-1/2 md:w-auto"
+            class="px-6 py-1 bg-main-green font-quicksand font-bold rounded-lg hover:bg-main-lightgreen transition md:text-lg lg:txt-xl w-1/2 md:w-auto"
           >
             Buscar
           </button>
         </div>
 
         <div class="mt-10">
-          <h2 class="font-semibold text-[#DD174E] text-2xl md:text-2xl lg:text-2xl mb-5">
+          <h2 class="font-main-quicksand font-semibold text-main-fuchsia text-2xl md:text-2xl lg:text-2xl mb-5">
             Gatos para adoptar
           </h2>
           <div class="relative w-full">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-4 pl-16 pr-16">
-              <div class="bg-[#FFF4F4] rounded">
+              <div class="bg-main-light0">
                 <div class="relative">
                   <picture>
-                    <source srcset="img/adoptar-gato1-movil.jpg" media="(max-width: 768px)">
-                    <source srcset="img/adoptar-gato1.jpg" media="(min-width: 769px)">
+                    <source srcset="img/OdieA_sm.jpg" media="(max-width: 768px)">
+                    <source srcset="img/OdieA_lg.jpg" media="(min-width: 769px)">
                     <img
-                      src="img/adoptar-gato1.jpg"
+                      src="img/OdieA_lg.jpg"
                       alt="Odie"
                       class="w-full h-48 md:w-full md:h-80 object-cover rounded-t"
                     />
                   </picture>
 
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -78,14 +89,14 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Odie</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Odie</h3>
                     <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
                   </div>
 
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -93,7 +104,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-[#FFF4F4] rounded hidden lg:block">
+              <div class="bg-main-light0 rounded hidden lg:block">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-gato2-movil.jpg" media="(max-width: 768px)">
@@ -105,7 +116,7 @@
                     />
                   </picture>
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -116,13 +127,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Lili</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Lili</h3>
                     <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -130,7 +141,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-[#FFF4F4] rounded hidden lg:block">
+              <div class="bg-main-light0 rounded hidden lg:block">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-gato3-movil.jpg" media="(max-width: 768px)">
@@ -142,7 +153,7 @@
                     />
                   </picture>
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -153,13 +164,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Austin</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Austin</h3>
                     <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -175,12 +186,12 @@
         </div>
 
         <div class="mt-10">
-          <h2 class="font-semibold text-[#DD174E] text-2xl md:text-2xl lg:text-2xl mb-5">
+          <h2 class="font-main-quicksand font-semibold text-main-fuchsia text-2xl md:text-2xl lg:text-2xl mb-5">
             Perros para adoptar
           </h2>
           <div class="relative w-full">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-4 pl-16 pr-16">
-              <div class="bg-[#FFF4F4] rounded">
+              <div class="bg-main-light0 rounded">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-perro1-movil.jpg" media="(max-width: 768px)">
@@ -193,7 +204,7 @@
                   </picture>
 
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -204,13 +215,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Mat</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Mat</h3>
                     <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -218,7 +229,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-[#FFF4F4] rounded hidden lg:block">
+              <div class="bg-main-light0 rounded hidden lg:block">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-perro2-movil.jpg" media="(max-width: 768px)">
@@ -231,7 +242,7 @@
                   </picture>
 
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -242,13 +253,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Xena</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Xena</h3>
                     <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -256,7 +267,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-[#FFF4F4] rounded hidden lg:block">
+              <div class="bg-main-light0 rounded hidden lg:block">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-perro3-movil.jpg" media="(max-width: 768px)">
@@ -269,7 +280,7 @@
                   </picture>
 
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -280,13 +291,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Senda</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Senda</h3>
                     <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -302,12 +313,12 @@
         </div>
 
         <div class="mt-10 mb-10">
-          <h2 class="font-semibold text-[#DD174E] text-2xl md:text-2xl lg:text-2xl mb-5">
+          <h2 class="font-semibold text-main-fuchsia text-2xl md:text-2xl lg:text-2xl mb-5">
             Otro tipo de mascotas
           </h2>
           <div class="relative w-full">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-4 pl-16 pr-16">
-              <div class="bg-[#FFF4F4] rounded">
+              <div class="bg-main-light0 rounded">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-otro-animal1-movil.jpg" media="(max-width: 768px)">
@@ -320,7 +331,7 @@
                   </picture>
 
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -331,13 +342,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Huri</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Huri</h3>
                     <img src="img/chica.png" alt="Chica" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -345,7 +356,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-[#FFF4F4] rounded hidden lg:block">
+              <div class="bg-main-light0 rounded hidden lg:block">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-otro-animal2-movil.jpg" media="(max-width: 768px)">
@@ -358,7 +369,7 @@
                   </picture>
 
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -369,13 +380,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Melon</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Melon</h3>
                     <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -383,7 +394,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-[#FFF4F4] rounded hidden lg:block">
+              <div class="bg-main-light0 rounded hidden lg:block">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-otro-animal3-movil.jpg" media="(max-width: 768px)">
@@ -396,7 +407,7 @@
                   </picture>
 
                   <div
-                    class="absolute top-2 right-2 w-10 h-10 bg-[#FCC1D1]/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#FCC1D1]/90 transition"
+                    class="absolute top-2 right-2 w-10 h-10 bg-main-pink/70 rounded-full flex items-center justify-center cursor-pointer hover:bg-main-pink/90 transition"
                   >
                     <img
                       src="img/favorito.png"
@@ -407,13 +418,13 @@
                 </div>
                 <div class="flex items-center justify-between p-4">
                   <div class="flex items-center">
-                    <h3 class="md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Tazo</h3>
+                    <h3 class="font-main-barlow md:ml-4 text-left text-xl md:text-xl lg:txt-xl">Tazo</h3>
                     <img src="img/chico.png" alt="Chico" class="ml-2 w-4" />
                   </div>
                   <div class="md:mr-4">
-                    <a href="#">
+                    <a href="detalles-animal.html">
                       <button
-                        class="bg-[#A3D9A5] text-[#362D2D] px-3 py-1 rounded font-bold hover:bg-green-400 transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
