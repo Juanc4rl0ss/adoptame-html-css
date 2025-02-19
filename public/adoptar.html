@@ -3,26 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adóptame</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Adóptame | Adoptar</title>
+    <link rel="stylesheet" href="css/styles.css"/>
   </head>
 
-  <body class="bg-main-light0 text-main-dark">
+  <body class="bg-main-light0 text-main-dark font-main-barlow">
     
     <!-- Contenido página adoptar -->
     <main class="items-center text-center">
-      <section class="bg-main-light1 w-11/12 md:w-3/5 lg:w-4/5 mx-auto my-8 mt-24 p-6 rounded-lg">
-        <h1 class="font-semibold text-2xl lg:text-3xl">Adopta un animal</h1>
-        <p class="text-left mt-5 ml-10">Filtra tu mascota ideal:</p>
+      <section class="bg-main-light1 md:w-3/5 lg:w-4/5 mx-auto my-8 mt-24 p-6 rounded-lg">
+        <h1 class="font-bold font-main-quicksand text-3xl lg:text-4xl">Adopta un animal</h1>
+        <p class="text-left text-lg mt-5 ml-10">Filtra tu mascota ideal:</p>
 
         <!-- Filtrar animal -->
         <div class="flex flex-wrap justify-center mt-4 gap-4 md:gap-20 font-main-barlow">
           <select
-            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
           >
             <option class="bg-main-pink" value="" disabled selected>Especie</option>
             <option class="bg-main-light1" value="gatos">Gatos</option>
@@ -30,7 +26,7 @@
             <option class="bg-main-light1" value="otros">Otros</option>
           </select>
           <select
-            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
           >
             <option class="bg-main-pink" value="" disabled selected>Tamaño</option>
             <option class="bg-main-light1" value="pequeño">Pequeño</option>
@@ -38,7 +34,7 @@
             <option class="bg-main-light1" value="grande">Grande</option>
           </select>
           <select
-            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
           >
             <option class="bg-main-pink" value="" disabled selected>Edad</option>
             <option class="bg-main-light1" value="cria">Cría</option>
@@ -46,21 +42,21 @@
             <option class="bg-main-light1" value="adulto">Adulto</option>
           </select>
           <select
-            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto"
+            class="border border-main-fuchsia rounded-lg px-20 py-2 text-left pl-2 w-1/2 md:w-auto bg-main-white cursor-pointer"
           >
             <option class="bg-main-pink" value="" disabled selected>Sexo</option>
             <option class="bg-main-light1" value="macho">Macho</option>
             <option class="bg-main-pink" value="hembra">Hembra</option>
           </select>
           <button
-            class="px-6 py-1 bg-main-green font-quicksand font-bold rounded-lg hover:bg-main-lightgreen transition md:text-lg lg:txt-xl w-1/2 md:w-auto"
+            class="px-6 py-1 bg-main-green font-quicksand font-bold rounded-lg hover:bg-main-lightgreen transition md:text-lg lg:txt-xl w-1/2 md:w-auto cursor-pointer"
           >
             Buscar
           </button>
         </div>
 
         <div class="mt-10">
-          <h2 class="font-main-quicksand font-semibold text-main-fuchsia text-2xl md:text-2xl lg:text-2xl mb-5">
+          <h2 class="font-main-quicksand font-bold text-main-fuchsia text-2xl md:text-3xl lg:text-4xl mb-5">
             Gatos para adoptar
           </h2>
           <div class="relative w-full">
@@ -96,7 +92,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
@@ -104,7 +100,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bg-main-light0 rounded hidden lg:block">
+              <div class="bg-main-light0 rounded hidden md:block">
                 <div class="relative">
                   <picture>
                     <source srcset="img/adoptar-gato2-movil.jpg" media="(max-width: 768px)">
@@ -133,7 +129,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
@@ -170,7 +166,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="cursor-pointer bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
                       >
                         Adóptame
                       </button>
@@ -186,7 +182,7 @@
         </div>
 
         <div class="mt-10">
-          <h2 class="font-main-quicksand font-semibold text-main-fuchsia text-2xl md:text-2xl lg:text-2xl mb-5">
+          <h2 class="font-main-quicksand font-bold text-main-fuchsia text-2xl md:text-3xl lg:text-4xl mb-5">
             Perros para adoptar
           </h2>
           <div class="relative w-full">
@@ -221,7 +217,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
@@ -259,7 +255,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
@@ -297,7 +293,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
@@ -313,7 +309,7 @@
         </div>
 
         <div class="mt-10 mb-10">
-          <h2 class="font-semibold text-main-fuchsia text-2xl md:text-2xl lg:text-2xl mb-5">
+          <h2 class="font-bold font-main-quicksand text-main-fuchsia text-2xl md:text-3xl lg:text-4xl mb-5">
             Otro tipo de mascotas
           </h2>
           <div class="relative w-full">
@@ -348,7 +344,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
@@ -386,7 +382,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
@@ -424,7 +420,7 @@
                   <div class="md:mr-4">
                     <a href="detalles-animal.html">
                       <button
-                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg"
+                        class="bg-main-green font-quicksand px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold hover:bg-main-lightgreen transition w-full md:text-sm lg:txt-lg cursor-pointer"
                       >
                         Adóptame
                       </button>
