@@ -1,11 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adóptame</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+
+  <body class="bg-main-light0 text-main-dark">
     
-</body>
+    <!-- Contenido de la página -->
+    <main class="items-center text-center">
+      <!-- Banner principal -->
+      <section class="relative">
+        <picture>
+          <source srcset="img/banner-movil.png" media="(max-width: 768px)">
+          <source srcset="img/banner.png" media="(min-width: 769px)">
+          <img
+            src="img/banner.png"
+            alt="Banner"
+            class="w-full h-72 object-cover mx-auto"
+          />
+        </picture>
+      </section>
+
+      <!-- Primera sección -->
+      <section class="bg-main-light1 w-11/12 sm:w-4/5 mx-auto my-8 p-6 rounded-lg absolute md:relative md:top-0 md:left-0 md:-translate-x-1 top-40 left-1/2 -translate-x-1/2">
+        <div class="flex flex-col items-center sm:flex-row gap-6 sm:gap-16">
+          <!-- Imagen -->
+          <picture class="md:w-full w-full justify-center sm:justify-start">
+            <source srcset="img/seccion-adoptar-movil.png" media="(max-width: 768px)">
+            <source srcset="img/seccion-adoptar.png" media="(min-width: 769px)">
+            <img
+              src="img/seccion-adoptar.png"
+              alt="Mano sosteniendo una pata"
+              class="object-cover rounded-lg w-48 h-40 md:w-full md:h-72 mx-auto sm:mx-0"
+            />
+          </picture>
+
+          <!-- Contenido -->
+          <div class="mx-auto sm:pl-10 sm:pr-10 md:pr-40 md:pl-40">
+            <h2 class="font-main-quicksand font-medium mb-4 text-2xl md:text-xl lg:text-2xl">
+              Nunca compres, adopta
+            </h2>
+            <p class="font-main-barlow text-left md:text-sm lg:text-lg">
+              Cada año, millones de animales buscan un hogar lleno de amor.
+              Adoptar no solo salva una vida, también llena la tuya de cariño y
+              gratitud. Cuando eliges adoptar, das una oportunidad a un ser que
+              lo necesita, combatiendo la cría irresponsable y el abandono. ¡Haz
+              la diferencia y sé parte del cambio!
+            </p>
+            <!-- Botón -->
+            <a href="informacion.html">
+              <button
+                class="mt-4 px-6 py-2 bg-main-green font-main-quicksand font-bold rounded-lg hover:bg-main-lightgreen transition md:text-lg lg:txt-xl cursor-pointer"
+              >
+                Ver más
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separador para móvil -->
+      <div class="h-96 md:h-0"></div>
+      
+      <!-- Separación entre secciones -->
+      <div class="border-t-3 rounded-full border-main-fuchsia mx-4 md:mx-12 mt-10 sm:mt-0"></div>
+
+      <!-- Sección 2 - Selección de animales -->
+      <section class="bg-main-light1 w-11/12 md:w-2/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
+        <h2 class="font-medium font-main-quicksand mb-6 text-2xl md:text-xl lg:text-2xl">
+          Escoge a tu animal de compañía
+        </h2>
+        <div class="flex justify-center space-x-6 md:space-x-20 lg:space-x-40 flex-wrap font-main-barlow">
+          <a href="adoptar.html">
+            <span class="mb-4 block">Perro</span>
+            <img src="img/perro.png" alt="Perro"/>
+          </a>
+          <a href="adoptar.html">
+            <span class="mb-4 block">Gato</span>
+            <img src="img/gato.png" alt="Gato" />
+          </a>
+          <a href="adoptar.html">
+            <span class="mb-4 block">Otros...</span>
+            <img src="img/otros.png" alt="Otros" />
+          </a>
+        </div>
+      </section>
+
+      <!-- Separación entre secciones -->
+      <div class="border-t-3 rounded border-main-fuchsia mx-4 md:mx-12"></div>
+
+      <!-- Sección 3 - Pasos para adoptar -->
+      <section class="bg-main-light1 w-11/12 md:w-3/5 mx-auto my-8 p-6 md:p-10 rounded-lg">
+        <h2 class="font-medium font-main-quicksand mb-4 text-2xl md:text-xl lg:text-2xl">
+          Pasos para adoptar un animal
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-40 mt-10 ml-10 mr-10">
+          <div class="bg-main-light0 p-4 rounded-lg">
+            <h3 class="font-bold font-main-quicksand text-xl">Paso 1</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Inicia sesión</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
+              Accede a tu cuenta o regístrate para empezar tu proceso de
+              adopción.
+            </p>
+            <img
+              src="img/Sesion.png"
+              alt="Icono iniciar sesión"
+              class="mx-auto block mt-5"
+            />
+          </div>
+          <div class="bg-main-light0 p-4 rounded-lg">
+            <h3 class="font-bold font-main-quicksand text-xl">Paso 2</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Usa los filtros</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
+              Filtra por especie, tamaño o edad para encontrar tu compañero
+              ideal.
+            </p>
+            <img
+              src="img/Busqueda.png"
+              alt="Lupa de búsuqeda"
+              class="mx-auto block mt-5"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-40 mt-10 md:mt-20 ml-10 mr-10">
+          <div class="bg-main-light0 p-4 rounded-lg">
+            <h3 class="font-bold font-main-quicksand text-xl">Paso 3</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Rellena el Formulario</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
+              Completa tus datos y detalles sobre tu hogar.
+            </p>
+            <img
+              src="img/Formulario.png"
+              alt="Formulario completado"
+              class="mx-auto block mt-5"
+            />
+          </div>
+          <div class="bg-main-light0 p-4 rounded-lg">
+            <h3 class="font-bold font-main-quicksand text-xl">Paso 4</h3>
+            <p class="font-main-barlow mt-4 md:text-sm lg:text-lg">Espera Respuesta</p>
+            <p class="font-main-barlow mt-4 md:text-xs lg:text-sm">
+              Revisaremos tu solicitud y te contactaremos pronto.
+            </p>
+            <img
+              src="img/Espera.png"
+              alt="Esperar respuesta"
+              class="mx-auto block mt-5"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    
+  </body>
 </html>
