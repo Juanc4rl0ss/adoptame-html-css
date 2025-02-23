@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Adopción</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-main-light0 text-main-dark">
+    <main class="items-center text-center">
+        <section class="bg-main-light1 w-11/12 md:w-1/3 lg:w-1/3 mx-auto my-8 mt-24 p-8 rounded-lg">
+            <h1 class="font-main-quicksand font-semibold text-2xl lg:text-3xl">
+          Formulario de Adopción
+        </h1>
+        
+        <form id="adopcion-form" class="mt-6 w-full mx-auto text-left" action="#" method="POST">
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+            <legend class="text-lg font-bold text-main-dark">Información del Peludito</legend>
+            <label for="especie">Especie:</label>
+            <input type="text" id="especie" name="especie" required placeholder="Ejemplo: Perro, Gato" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="nombre_peludo">Nombre:</label>
+            <input type="text" id="nombre_peludo" name="nombre_peludo" required placeholder="Ejemplo: Max, Luna" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+          </fieldset>
+
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+            <legend class="text-lg font-bold text-main-dark">Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}" title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres" required placeholder="Tu nombre" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,128}" title="Solo caracteres alfabéticos. Mínimo 2 y máximo 128 caracteres" required placeholder="Tus apellidos" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="telefono">Teléfono de contacto:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" title="Introduce un número de 10 dígitos" required placeholder="10 dígitos" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+          </fieldset>
+
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+            <legend class="text-lg font-bold text-main-dark">Dirección del Adoptante</legend>
+            <label for="calle">Calle y número:</label>
+            <input type="text" id="calle" name="calle" required placeholder="Tu dirección completa" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required placeholder="Tu ciudad" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" required placeholder="Tu provincia" class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="codigo_postal">Código Postal:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" pattern="[0-9]{5}" title="Introduce un código postal válido (5 dígitos)" required class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4">
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="Argentina">Argentina</option>
+              <option value="España">España</option>
+              <option value="México">México</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+            <legend class="text-lg font-bold text-main-dark">Preguntas al Adoptante</legend>
+            
+            <div class="mb-4">
+              <label for="experiencia" class="block font-main-quicksand mb-1 text-main-dark">
+                ¿Qué experiencia previa tiene con animales?
+              </label>
+              <textarea id="experiencia" name="experiencia" required class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40"></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label for="entorno" class="block font-main-quicksand mb-1 text-main-dark">
+                ¿Cómo será el entorno en el que vivirá el animal?
+              </label>
+              <textarea id="entorno" name="entorno" required class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40"></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label for="cuidado" class="block font-main-quicksand mb-1 text-main-dark">
+                ¿Cómo planea manejar el cuidado y los gastos asociados con el animal?
+              </label>
+              <textarea id="cuidado" name="cuidado" required class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="mb-4 flex justify-center gap-4">
+            <button type="submit" class="bg-main-green font-main-quicksand px-6 py-2 rounded-lg font-bold hover:bg-main-lightgreen transition text-lg">
+              Adoptar
+            </button>
+            <button type="reset" class="bg-gray-400 font-main-quicksand px-6 py-2 rounded-lg font-bold hover:bg-gray-500 transition text-lg">
+              Reiniciar
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
