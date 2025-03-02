@@ -1,252 +1,276 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="favicon.ico" href="img/favicon.ico">
-    <title>Información | Adóptame</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-  </head>
 
-  <body class="bg-main-light0 text-main-dark">
-   <!-- Encabezado principal -->
-<header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="favicon.ico" href="img/favicon.ico">
+  <title>Información | Adóptame</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-main-light0 text-main-dark">
+  <!-- Encabezado principal -->
+  <header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <div class="flex justify-between items-center h-16">
 
-          <!-- Menú para escritorio -->
-          <div class="flex items-center justify-between w-full px-6">
-              <!-- Logo alineado a la izquierda -->
-              <div class="flex items-center">
-                  <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
-                  <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
-              </div>
+        <!-- Menú para escritorio -->
+        <div class="flex items-center justify-between w-full px-6">
+          <!-- Logo alineado a la izquierda -->
+          <div class="flex items-center">
+            <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
+            <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
+          </div>
 
-              <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
-                  <a href="adoptar.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Adoptar</a>
-                  <a href="contacto.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Contacto</a>
-                  <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
-                  <!-- <a href="#"
+          <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
+            <a href="adoptar.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Adoptar</a>
+            <a href="contacto.html"
+              class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Contacto</a>
+            <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
+            <!-- <a href="#"
                       class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
-                  <!-- <a href="./adoptar.html"
+            <!-- <a href="./adoptar.html"
                       class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a> -->
-                  <a href="informacion.html" class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a>
+            <a href="informacion.html"
+              class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más
+              Información</a>
 
-                  <!-- <a href="#"
+            <!-- <a href="#"
                       class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a> -->
-              </nav>
-              
+          </nav>
 
-              <!-- Ícono de usuario alineado a la derecha -->
-              <div class="hidden md:flex">
-                  <img src="img/user.png" alt="Usuario" class="h-12 w-auto">
-              </div>
+
+          <!-- Ícono de usuario alineado a la derecha -->
+          <div class="hidden md:flex">
+            <img src="img/user.png" alt="Usuario" class="h-12 w-auto">
           </div>
+        </div>
 
 
-          <!-- Menú hamburguesa  -->
-          <div class="md:hidden relative w-full flex justify-end">
-              <!-- Checkbox oculto para manejar el menú -->
-              <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <!-- Menú hamburguesa  -->
+        <div class="md:hidden relative w-full flex justify-end">
+          <!-- Checkbox oculto para manejar el menú -->
+          <input type="checkbox" id="menu-toggle" class="peer hidden">
 
-              <!-- Botón hamburguesa alineado a la derecha -->
-              <label for="menu-toggle" class="cursor-pointer">
-                  <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
-              </label>
+          <!-- Botón hamburguesa alineado a la derecha -->
+          <label for="menu-toggle" class="cursor-pointer">
+            <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
+          </label>
 
-              <!-- Menú desplegable en móviles -->
-              <div#
-                  class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3">
-                  <a href="adoptar.html"
-                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Adoptar</a>
-                  <a href="contacto.html"
-                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Contacto</a>
-                  <!-- SELECTED <a href="#"
+          <!-- Menú desplegable en móviles -->
+          <div#
+            class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3">
+            <a href="adoptar.html"
+              class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Adoptar</a>
+            <a href="contacto.html"
+              class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Contacto</a>
+            <!-- SELECTED <a href="#"
                       class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
-                  <a href="informacion.html"
-                  class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más
-                      Información</a>
-                  <a href="login.html"
-                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar sesión</a>
-              </div#>
+            <a href="informacion.html"
+              class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más
+              Información</a>
+            <a href="login.html"
+              class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar
+              sesión</a>
+          </div#>
 
-          </div>
+        </div>
 
       </div>
-  </nav>
-</header>
+
+    </nav>
+  </header>
 
   <!-- Contenido más información -->
-    <main class="flex flex-col items-center p-8 mt-8">
-      <!-- Primera sección -->
-      <section class="bg-main-light1 w-11/12 md:w-3/4 lg:w-3/5 mx-auto my-8 mt-8 p-6 rounded-lg">
-        <!-- Contenido -->
-        <div class="text-center px-4 md:px-10 lg:px-20">
-          <h1 class="font-bold font-main-quicksand mb-4 text-2xl md:text-2xl lg:text-3xl">
-            La importancia de la adopción
-          </h1>
-          <p class="text-left font-main-barlow text-sm md:text-base lg:text-lg">
-            Cada año, millones de animales buscan un hogar lleno de amor.
-            Adoptar no solo salva una vida, también llena la tuya de cariño y
-            gratitud. Cuando eliges adoptar, das una oportunidad a un ser que lo
-            necesita, combatiendo la cría irresponsable y el abandono. ¡Haz la
-            diferencia y sé parte del cambio!
-          </p>
-        </div>
-      </section>
-
-      <!-- Separación entre secciones -->
-      <div class="border-t-3 border-main-fuchsia w-11/12 rounded-full"></div>
-
-      <!-- Segunda sección -->
-      <section class="bg-main-light1 w-11/12 md:w-3/4 lg:w-3/5 mx-auto my-8 p-6 rounded-lg">
-        <!-- Contenido -->
-        <div class="text-center px-4 md:px-10 lg:px-20">
-          <h1 class="font-bold font-main-quicksand mb-4 text-2xl md:text-2xl lg:text-3xl">
-            ¿Por qué adoptar?
-          </h1>
-          <p class="text-left font-main-barlow text-sm md:text-base lg:text-lg">
-            Adoptar significa brindar una segunda oportunidad a un animal que ha
-            sufrido el abandono o el maltrato. Es un acto de amor y
-            responsabilidad que contribuye a reducir la cantidad de animales en
-            refugios y en situación de calle. Además, al adoptar, ayudas a
-            combatir la cría indiscriminada y promueves la tenencia responsable,
-            dándole a un ser vivo una vida digna y llena de cariño. ¡Transforma
-            una vida y enriquece la tuya!
-          </p>
-        </div>
-      </section>
-
-      <!-- Separación entre secciones -->
-      <div class="border-t-3 border-main-fuchsia w-11/12 rounded-full"></div>
-
-      <!-- Tercera sección - Ejemplos de animales adoptados-->
-      <section class="bg-main-light1 w-11/12 md:w-3/4 lg:w-4/5 mx-auto my-8 p-6 rounded-lg">
-        <!-- Contenido -->
-        <div class="text-center px-4 md:px-10 lg:px-20">
-          <h1 class="font-bold font-main-quicksand mb-4 text-2xl md:text-2xl lg:text-3xl">
-            Animales adoptados
-          </h1>
-          <p class="text-left font-main-barlow text-sm md:text-base lg:text-lg">
-            Os mostramos fotos de algunos de nuestros animales antes de ser
-            adoptados y después de convivir un periodo de tiempo con sus nuevas
-            familias.
-          </p>
-          
-          <div class="mt-5 mb-5">
-            <!-- Kenai -->
-            <div class="mt-10">
-              <h3
-                class="text-main-fuchsia font-main-quicksand font-bold mb-4 text-left text-lg">
-                Kenai
-              </h3>
-              <figure class="flex flex-wrap justify-center items-center gap-5">
-                <div class="text-center">
-                  <picture>
-                    <source srcset="img/informacion-animal1-antes-movil.png" media="(max-width: 768px)">
-                    <source srcset="img/informacion-animal1-antes.png" media="(min-width: 769px)">
-                    <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal1-antes.png" alt="Animal antes de ser rescatado">
-                  </picture>
-                  <figcaption class="mt-2 text-sm font-main-barlow">Antes</figcaption>
-                </div>
-                <div class="text-center">
-                  <picture>
-                    <source srcset="img/informacion-animal1-despues-movil.png" media="(max-width: 768px)">
-                    <source srcset="img/informacion-animal1-despues.png" media="(min-width: 769px)">
-                    <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal1-despues.png" alt="Animal rescatado">
-                  </picture>
-                  <figcaption class="mt-2 text-sm font-main-barlow">Despues</figcaption>
-                </div>
-              </figure>
-            </div>
-            <div class="mt-10">
-              <h3
-                class="text-main-fuchsia font-main-quicksand font-bold mb-4 text-left text-lg">
-                Kodiak
-              </h3>
-              <figure class="flex flex-wrap justify-center items-center gap-5">
-                <div class="text-center">
-                  <picture>
-                    <source srcset="img/informacion-animal2-antes-movil.png" media="(max-width: 768px)">
-                    <source srcset="img/informacion-animal2-antes.png" media="(min-width: 769px)">
-                    <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal2-antes.png" alt="Animal antes de ser rescatado">
-                  </picture>
-                  <figcaption class="mt-2 text-sm font-main-barlow">Antes</figcaption>
-                </div>
-                <div class="text-center">
-                  <picture>
-                    <source srcset="img/informacion-animal2-despues-movil.png" media="(max-width: 768px)">
-                    <source srcset="img/informacion-animal2-despues.png" media="(min-width: 769px)">
-                    <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal2-despues.png" alt="Animal rescatado">
-                  </picture>
-                  <figcaption class="mt-2 text-sm font-main-barlow">Despues</figcaption>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="w-full bg-main-pink py-8 mt-auto text-main-dark text-center">
-      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center sm:text-left">
-  
-              <!-- Sobre Nosotros -->
-              <div class=" w-[220px] mx-auto">
-                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand text-center">
-                      Sobre nosotros
-                  </h3>
-                  <ul class="mt-3 space-y-2">
-                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
-                      <li><a href="#" class="hover:underline font-main-barlow">Nuestros métodos</a></li>
-                      <li><a href="contacto.html" class="hover:underline font-main-barlow">Contacto</a></li>
-                  </ul>
-              </div>
-  
-              <!-- Servicios -->
-              <div class="w-[220px] mx-auto">
-                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand  text-center">
-                      Servicios
-                  </h3>
-                  <ul class="mt-3 space-y-2">
-                      <li><a href="#" class="hover:underline font-main-barlow">Rescate de animales</a></li>
-                      <li><a href="#" class="hover:underline font-main-barlow">Educación ambiental</a></li>
-                      <li><a href="#" class="hover:underline font-main-barlow">Voluntariado</a></li>
-                  </ul>
-              </div>
-  
-              <!-- Proyectos -->
-              <div class="w-[220px] mx-auto">
-                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand text-center">
-                      Proyectos
-                  </h3>
-                  <ul class="mt-3 space-y-2">
-                      <li><a href="#" class="hover:underline font-main-barlow">Especies en peligro</a></li>
-                      <li><a href="#" class="hover:underline font-main-barlow">Adopciones responsables</a></li>
-                      <li><a href="#" class="hover:underline font-main-barlow">Apadrinamiento</a></li>
-                  </ul>
-              </div>
-  
-              <!-- Síguenos -->
-              <div class="w-[220px] mx-auto">
-                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
-                      Síguenos
-                  </h3>
-                  <ul class="mt-3 space-y-2">
-                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
-                      <li><a href="#" class="hover:underline font-main-barlow">Contenido</a></li>
-                  </ul>
-  
-                  <!-- Iconos redes sociales -->
-                  <div class="mt-2 text-xl space-x-4">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                  </div>
-              </div>
-          </div>
+  <main class="flex flex-col items-center p-8 mt-8">
+    <!-- Primera sección -->
+    <section class="bg-main-light1 w-11/12 md:w-3/4 lg:w-3/5 mx-auto my-8 mt-8 p-6 rounded-lg">
+      <!-- Contenido -->
+      <div class="text-center px-4 md:px-10 lg:px-20">
+        <h1 class="font-bold font-main-quicksand mb-4 text-2xl md:text-2xl lg:text-3xl">
+          La importancia de la adopción
+        </h1>
+        <p class="text-left font-main-barlow text-sm md:text-base lg:text-lg">
+          Cada año, millones de animales buscan un hogar lleno de amor.
+          Adoptar no solo salva una vida, también llena la tuya de cariño y
+          gratitud. Cuando eliges adoptar, das una oportunidad a un ser que lo
+          necesita, combatiendo la cría irresponsable y el abandono. ¡Haz la
+          diferencia y sé parte del cambio!
+        </p>
       </div>
+    </section>
+
+    <!-- Separación entre secciones -->
+    <div class="border-t-3 border-main-fuchsia w-11/12 rounded-full"></div>
+
+    <!-- Segunda sección -->
+    <section class="bg-main-light1 w-11/12 md:w-3/4 lg:w-3/5 mx-auto my-8 p-6 rounded-lg">
+      <!-- Contenido -->
+      <div class="text-center px-4 md:px-10 lg:px-20">
+        <h1 class="font-bold font-main-quicksand mb-4 text-2xl md:text-2xl lg:text-3xl">
+          ¿Por qué adoptar?
+        </h1>
+        <p class="text-left font-main-barlow text-sm md:text-base lg:text-lg">
+          Adoptar significa brindar una segunda oportunidad a un animal que ha
+          sufrido el abandono o el maltrato. Es un acto de amor y
+          responsabilidad que contribuye a reducir la cantidad de animales en
+          refugios y en situación de calle. Además, al adoptar, ayudas a
+          combatir la cría indiscriminada y promueves la tenencia responsable,
+          dándole a un ser vivo una vida digna y llena de cariño. ¡Transforma
+          una vida y enriquece la tuya!
+        </p>
+      </div>
+    </section>
+
+    <!-- Separación entre secciones -->
+    <div class="border-t-3 border-main-fuchsia w-11/12 rounded-full"></div>
+
+    <!-- Tercera sección - Ejemplos de animales adoptados-->
+    <section class="bg-main-light1 w-11/12 md:w-3/4 lg:w-4/5 mx-auto my-8 p-6 rounded-lg">
+      <!-- Contenido -->
+      <div class="text-center px-4 md:px-10 lg:px-20">
+        <h1 class="font-bold font-main-quicksand mb-4 text-2xl md:text-2xl lg:text-3xl">
+          Animales adoptados
+        </h1>
+        <p class="text-left font-main-barlow text-sm md:text-base lg:text-lg">
+          Os mostramos fotos de algunos de nuestros animales antes de ser
+          adoptados y después de convivir un periodo de tiempo con sus nuevas
+          familias.
+        </p>
+
+        <div class="mt-5 mb-5">
+          <!-- Kenai -->
+          <div class="mt-10">
+            <h3 class="text-main-fuchsia font-main-quicksand font-bold mb-4 text-left text-lg">
+              Kenai
+            </h3>
+            <figure class="flex flex-wrap justify-center items-center gap-5">
+              <div class="text-center">
+                <picture>
+                  <source srcset="img/informacion-animal1-antes-movil.png" media="(max-width: 768px)">
+                  <source srcset="img/informacion-animal1-antes.png" media="(min-width: 769px)">
+                  <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal1-antes.png"
+                    alt="Animal antes de ser rescatado">
+                </picture>
+                <figcaption class="mt-2 text-sm font-main-barlow">Antes</figcaption>
+              </div>
+              <div class="text-center">
+                <picture>
+                  <source srcset="img/informacion-animal1-despues-movil.png" media="(max-width: 768px)">
+                  <source srcset="img/informacion-animal1-despues.png" media="(min-width: 769px)">
+                  <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal1-despues.png"
+                    alt="Animal rescatado">
+                </picture>
+                <figcaption class="mt-2 text-sm font-main-barlow">Despues</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="mt-10">
+            <h3 class="text-main-fuchsia font-main-quicksand font-bold mb-4 text-left text-lg">
+              Kodiak
+            </h3>
+            <figure class="flex flex-wrap justify-center items-center gap-5">
+              <div class="text-center">
+                <picture>
+                  <source srcset="img/informacion-animal2-antes-movil.png" media="(max-width: 768px)">
+                  <source srcset="img/informacion-animal2-antes.png" media="(min-width: 769px)">
+                  <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal2-antes.png"
+                    alt="Animal antes de ser rescatado">
+                </picture>
+                <figcaption class="mt-2 text-sm font-main-barlow">Antes</figcaption>
+              </div>
+              <div class="text-center">
+                <picture>
+                  <source srcset="img/informacion-animal2-despues-movil.png" media="(max-width: 768px)">
+                  <source srcset="img/informacion-animal2-despues.png" media="(min-width: 769px)">
+                  <img class="md:mx-10 md:w-60 lg:mx-10 lg:w-60" src="img/informacion-animal2-despues.png"
+                    alt="Animal rescatado">
+                </picture>
+                <figcaption class="mt-2 text-sm font-main-barlow">Despues</figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- Botón Hazte Voluntario -->
+    <div class="mt-6 text-center">
+      <a href="voluntariado.html">
+        <button
+          class="bg-main-green font-quicksand px-6 py-2 md:px-8 md:py-3 rounded-xl font-bold hover:bg-main-lightgreen transition text-lg md:text-xl cursor-pointer">
+          Hazte voluntario
+        </button>
+      </a>
+    </div>
+
+  </main>
+  <footer class="w-full bg-main-pink py-8 mt-auto text-main-dark text-center">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center sm:text-left">
+
+        <!-- Sobre Nosotros -->
+        <div class=" w-[220px] mx-auto">
+          <h3
+            class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand text-center">
+            Sobre nosotros
+          </h3>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+            <li><a href="#" class="hover:underline font-main-barlow">Nuestros métodos</a></li>
+            <li><a href="contacto.html" class="hover:underline font-main-barlow">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Servicios -->
+        <div class="w-[220px] mx-auto">
+          <h3
+            class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand  text-center">
+            Servicios
+          </h3>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#" class="hover:underline font-main-barlow">Rescate de animales</a></li>
+            <li><a href="#" class="hover:underline font-main-barlow">Educación ambiental</a></li>
+            <li><a href="#" class="hover:underline font-main-barlow">Voluntariado</a></li>
+          </ul>
+        </div>
+
+        <!-- Proyectos -->
+        <div class="w-[220px] mx-auto">
+          <h3
+            class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand text-center">
+            Proyectos
+          </h3>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#" class="hover:underline font-main-barlow">Especies en peligro</a></li>
+            <li><a href="#" class="hover:underline font-main-barlow">Adopciones responsables</a></li>
+            <li><a href="#" class="hover:underline font-main-barlow">Apadrinamiento</a></li>
+          </ul>
+        </div>
+
+        <!-- Síguenos -->
+        <div class="w-[220px] mx-auto">
+          <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+            Síguenos
+          </h3>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+            <li><a href="#" class="hover:underline font-main-barlow">Contenido</a></li>
+          </ul>
+
+          <!-- Iconos redes sociales -->
+          <div class="mt-2 text-xl space-x-4">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
-  </body>
+</body>
+
 </html>
