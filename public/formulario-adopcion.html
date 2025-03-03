@@ -46,6 +46,8 @@
               id="nombre_peludo"
               name="nombre_peludo"
               required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
               placeholder="Ejemplo: Max, Luna"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
@@ -76,6 +78,8 @@
               id="nombre"
               name="nombre"
               required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
               placeholder="Tu nombre"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
@@ -86,29 +90,33 @@
               id="apellidos"
               name="apellidos"
               required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,128}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 128 caracteres"
               placeholder="Tus apellidos"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
 
-            <label for="telefono">Teléfono de contacto:</label>
+            <label for="telefono">Teléfono de Contacto:</label>
             <input
               type="tel"
               id="telefono"
               name="telefono"
-              pattern="[0-9]{10}"
-              title="Introduce un número de 10 dígitos"
+              pattern="[0-9]{9}"
+              title="Introduce un número de teléfono válido. 9 dígitos sin espacios ni guiones"
               required
-              placeholder="10 dígitos"
+              placeholder="9 dígitos"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
-
-            <label for="email">Email:</label>
+  
+            <label for="email">Correo Electrónico:</label>
             <input
               type="email"
               id="email"
               name="email"
+              pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}"
+              title="Introduce un correo válido en el formato usuario@dominio.com."
               required
-              placeholder="Tu correo electrónico"
+              placeholder="Ingresa tu correo"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
           </fieldset>
@@ -118,16 +126,27 @@
             <legend class="text-lg font-bold text-main-dark">
               Dirección del Adoptante
             </legend>
+            <label for="calle">Calle:</label>
+            <input type="text" 
+                   id="calle" 
+                   name="calle" 
+                   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,50}" 
+                   title="Debe contener solo letras y espacios, con un mínimo de 2 y un máximo de 50 caracteres." 
+                   required 
+                   placeholder="Ejemplo: Gran Vía, Libertad" 
+                   class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+            
 
-            <label for="calle">Calle y número:</label>
-            <input
-              type="text"
-              id="calle"
-              name="calle"
-              required
-              placeholder="Tu dirección completa"
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
-            />
+        <label for="numero">Número:</label>
+        <input type="text" 
+              id="numero" 
+              name="numero" 
+              pattern="^[0-9]{1,5}[A-Za-z]?$"
+              title="Debe contener entre 1 y 5 dígitos, y opcionalmente una letra al final (Ej: 123 o 45B)."
+              required 
+              placeholder="Ejemplo: 23, 100, 45B" 
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-4" />
+
 
             <label for="ciudad">Ciudad:</label>
             <input
@@ -135,6 +154,8 @@
               id="ciudad"
               name="ciudad"
               required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
               placeholder="Tu ciudad"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
@@ -145,6 +166,8 @@
               id="provincia"
               name="provincia"
               required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
               placeholder="Tu provincia"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
@@ -165,7 +188,6 @@
           <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
             <legend class="text-lg font-bold text-main-dark">Entorno del Adoptante</legend>
         
-            <!-- Tipo de vivienda -->
             <label class="block mb-2">¿En qué tipo de vivienda resides?</label>
             <input type="radio" id="casa" name="tipo_vivienda" value="casa" required>
             <label for="casa">Casa</label>
@@ -173,12 +195,10 @@
             <input type="radio" id="departamento" name="tipo_vivienda" value="departamento">
             <label for="departamento">Departamento</label>
         
-            <!-- Nueva Pregunta: ¿Hay más personas en el hogar? -->
             <label class="block mt-4">¿Cuántas personas viven en tu hogar?</label>
             <input type="number" id="personas_hogar" name="personas_hogar" min="1" required 
                 class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green">
         
-            <!-- Nueva Pregunta: ¿Todos están de acuerdo con la adopción? -->
             <label class="block mt-4">¿Todas las personas en tu hogar están de acuerdo con la adopción?</label>
             <input type="radio" id="acuerdo_si" name="acuerdo_adopcion" value="si" required>
             <label for="acuerdo_si">Sí</label>
@@ -200,6 +220,8 @@
               id="experiencia"
               name="experiencia"
               required
+              minlength="5"
+              maxlength="500"
               class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green"
             ></textarea>
 
@@ -210,6 +232,8 @@
               id="entorno"
               name="entorno"
               required
+              minlength="5"
+              maxlength="500"
               class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green"
             ></textarea>
 
@@ -221,6 +245,8 @@
               id="cuidado"
               name="cuidado"
               required
+              minlength="5"
+              maxlength="500"
               class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green"
             ></textarea>
           </fieldset>
