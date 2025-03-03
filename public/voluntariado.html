@@ -6,10 +6,71 @@
     <title>Formulario de Voluntariado</title>
     <link href="css/styles.css" rel="stylesheet" />
   </head>
-  <body class="bg-main-light0 text-main-dark">
-    <main class="items-center text-center">
+  <body class="bg-main-light0 text-main-dark flex flex-col min-h-screen">
+    <!-- Encabezado principal -->
+<header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div class="flex justify-between items-center h-16">
+          <!-- Menú para escritorio -->
+          <div class="flex items-center justify-between w-full px-6">
+              <!-- Logo alineado a la izquierda -->
+              <div class="flex items-center">
+                  <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
+                  <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
+              </div>
+              <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
+                  <a href="adoptar.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Adoptar</a>
+                  <a href="contacto.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Contacto</a>
+                  <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
+                  <!-- <a href="#"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                  <!-- <a href="./adoptar.html"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a> -->
+                  <a href="informacion.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2">Más Información</a>
+                  <!-- <a href="#"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a> -->
+              </nav>
+              <!-- Ícono de usuario alineado a la derecha -->
+              <div class="hidden md:flex">
+                  <a href="login.html"><img src="img/user.png" alt="Usuario" class="h-12 w-auto"></a>
+              </div>
+          </div>
+          <!-- Menú hamburguesa  -->
+          <div class="md:hidden relative w-full flex justify-end">
+              <!-- Checkbox oculto para manejar el menú -->
+              <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+              <!-- Botón hamburguesa alineado a la derecha -->
+              <label for="menu-toggle" class="cursor-pointer">
+                  <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
+              </label>
+
+              <!-- Menú desplegable en móviles -->
+              <div#
+                  class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3 pb-3">
+                  <a href="adoptar.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Adoptar</a>
+                  <a href="contacto.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Contacto</a>
+                  <!-- SELECTED <a href="#"
+                      class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                  <a href="informacion.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Más
+                      Información</a>
+                  <a href="login.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar
+                      sesión</a>
+              </div#>
+          </div>
+      </div>
+  </nav>
+</header>
+    <main class="items-center text-center font-main-barlow">
       <section
-        class="bg-main-light1 w-11/12 md:w-1/3 lg:w-1/3 mx-auto my-8 mt-24 p-8 rounded-lg"
+        class="bg-main-light1 w-11/12 lg:w-240 xl:w-280 mx-auto my-8 mt-24 p-8 rounded-lg"
       >
         <h1 class="font-main-quicksand font-semibold text-2xl lg:text-3xl">
           Formulario de Voluntariado
@@ -17,17 +78,17 @@
 
         <form
           id="voluntariado-form"
-          class="mt-6 w-full mx-auto text-left"
+          class="mt-6 w-full mx-auto text-left grid grid-cols-2 gap-8"
           action="#"
           method="POST"
         >
           <!-- Información Personal -->
-          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 col-span-2 lg:col-span-1 h-full">
             <legend class="text-lg font-bold text-main-dark">
               Información Personal
             </legend>
 
-            <label for="nombre">Nombre:</label>
+            <label for="nombre">Nombre:</label> <span class="text-main-fuchsia font-bold text-lg">*</span>
             <input
               type="text"
               id="nombre"
@@ -36,14 +97,14 @@
               pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
               title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
               placeholder="Tu nombre"
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
+              class="border bg-main-white border-main-fuchsia w-full p-2 mb-2 rounded-lg focus:outline-none focus:border-main-green"
             />
 
               <!-- Apellidos -->
-          <div class="mb-4">
+          <div>
             <label
               for="apellidos"
-              class="block font-main-quicksand mb-1 text-main-dark"
+              class="block font-main-quicksan text-main-dark"
             >
               Apellidos:
             </label>
@@ -56,7 +117,7 @@
               maxlength="128"
               title="Solo caracteres alfabéticos. Mínimo 2 y máximo 128 caracteres"
                 placeholder="Ingresa tus apellidos"
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
+              class="border bg-main-white border-main-fuchsia w-full mb-2 p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
           </div>
 
@@ -67,12 +128,11 @@
               name="telefono"
               pattern="[0-9]{9}"
               title="Introduce un número de teléfono válido. 9 dígitos sin espacios ni guiones"
-              required
               placeholder="9 dígitos"
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
             />
 
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">Correo Electrónico:</label> <span class="text-main-fuchsia font-bold text-lg">*</span>
             <input
               type="email"
               id="email"
@@ -81,21 +141,21 @@
               title="Introduce un correo válido en el formato usuario@dominio.com."
               required
               placeholder="Ingresa tu correo"
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
             />
           </fieldset>
 
           <!-- Disponibilidad -->
-          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg col-span-2 lg:col-span-1 h-full">
             <legend class="text-lg font-bold text-main-dark">Disponibilidad</legend>
 
-            <label for="dias_disponibles">¿Cuántos días a la semana puedes ser voluntario?</label>
+            <label for="dias_disponibles">¿Cuántos días a la semana puedes ser voluntario?</label> <span class="text-main-fuchsia font-bold text-lg">*</span>
             <input type="text" id="dias_disponibles" name="dias_disponibles" required
               pattern="[1-7]" title="Introduce un número del 1 al 7."
               placeholder="Ingresa un número entre 1 y 7"
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green" />
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2" />
           
-            <label class="block mt-4">¿En qué horario estarías disponible?</label>
+            <label>¿En qué horario estarías disponible?</label> <span class="text-main-fuchsia font-bold text-lg">*</span>
             <select
               id="horario"
               name="horario"
@@ -112,17 +172,17 @@
           </fieldset>
 
           <!-- Experiencia y Habilidades -->
-          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 col-span-2 lg:col-span-1 h-full">
             <legend class="text-lg font-bold text-main-dark">
               Experiencia y Habilidades
             </legend>
 
-            <label for="experiencia">¿Tienes experiencia previa en voluntariado?</label>
+            <label for="experiencia">¿Tienes experiencia previa en voluntariado?</label>  <span class="text-main-fuchsia font-bold text-lg">*</span>
             <select
               id="experiencia"
               name="experiencia"
               required
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
             >
               <option value="" disabled selected>Seleccionar</option>
               <option value="si">Sí</option>
@@ -131,7 +191,7 @@
 
             <label for="habilidades"
               >¿Qué habilidades crees que puedes aportar?</label
-            >
+            > <span class="text-main-fuchsia font-bold text-lg">*</span>
             <textarea
               id="habilidades"
               name="habilidades"
@@ -144,7 +204,7 @@
           </fieldset>
 
           <!-- Áreas de Interés -->
-          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 col-span-2 lg:col-span-1 h-full">
             <legend class="text-lg font-bold text-main-dark">Áreas de Interés</legend>
 
             <label class="block mb-2">¿En qué área te gustaría ayudar?</label>
@@ -175,12 +235,12 @@
           </fieldset>
 
           <!-- Motivos para ser voluntario -->
-          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg col-span-2">
             <legend class="text-lg font-bold text-main-dark">
               Motivos para ser Voluntario
             </legend>
 
-            <label for="motivo">¿Por qué deseas ser voluntario?</label>
+            <label for="motivo">¿Por qué deseas ser voluntario?</label> <span class="text-main-fuchsia font-bold text-lg">*</span>
             <textarea
               id="motivo"
               name="motivo"
@@ -191,28 +251,88 @@
               class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green"
             ></textarea>
           </fieldset>
+          <!-- Campos obligatorios -->
+        <p class="flex col-span-2 text-lg">
+          <span class="text-main-fuchsia font-bold text-lg">*</span> Campos obligatorios
+        </p>
 
           <!-- Botones -->
-          <div class="mb-4 flex justify-center">
+          <div class="mb-4 flex justify-center col-span-2">
             <button
               type="submit"
-              class="bg-main-green font-main-quicksand px-4 py-2 rounded-lg font-bold hover:bg-main-lightgreen transition"
+              class="bg-main-green font-main-quicksand h-11 w-44 rounded-lg font-bold hover:bg-main-lightgreen transition cursor-pointer"
             >
               Enviar Solicitud
             </button>
 
             <button
               type="reset"
-              class="ml-4 bg-main-gray font-main-quicksand px-4 py-2 rounded-lg font-bold hover:bg-main-lightgray transition"            >
+              class="ml-4 bg-main-gray font-main-quicksand h-11 w-32 rounded-lg font-bold hover:bg-main-lightgray transition border-1 border-main-fuchsia cursor-pointer hover:bg-main-pink"            >
               Reiniciar
             </button>
           </div>
 
-          <p class="font-main-quicksand font-semibold text-main-dark mt-4">
+          <p class="font-main-quicksand font-semibold text-main-dark mt-4 col-span-2 text-center">
             🌱 ¡Gracias por querer hacer la diferencia! Pronto nos pondremos en contacto contigo. 🐾
           </p>
         </form>
       </section>
     </main>
+    <footer class="w-full bg-main-pink py-8 mt-auto text-main-dark text-center">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20">
+              <!-- Sobre Nosotros -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Sobre nosotros
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestros métodos</a></li>
+                      <li><a href="contacto.html" class="hover:underline font-main-barlow">Contacto</a></li>
+                  </ul>
+              </div>
+              <!-- Servicios -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Servicios
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Rescate de animales</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Educación ambiental</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Voluntariado</a></li>
+                  </ul>
+              </div>
+              <!-- Proyectos -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Proyectos
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Especies en peligro</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Adopciones responsables</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Apadrinamiento</a></li>
+                  </ul>
+              </div>
+              <!-- Síguenos -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Síguenos
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Contenido</a></li>
+                  </ul>
+                  <!-- Iconos redes sociales -->
+                  <div class="mt-2 text-xl space-x-4">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
   </body>
 </html>

@@ -654,6 +654,9 @@
   .col-auto {
     grid-column: auto;
   }
+  .col-span-1 {
+    grid-column: span 1 / span 1;
+  }
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -746,12 +749,6 @@
     @media (width >= 96rem) {
       max-width: 96rem !important;
     }
-  }
-  .m-1 {
-    margin: calc(var(--spacing) * 1);
-  }
-  .m-9 {
-    margin: calc(var(--spacing) * 9);
   }
   .m-auto {
     margin: auto;
@@ -921,9 +918,6 @@
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
-  .h-6 {
-    height: calc(var(--spacing) * 6);
-  }
   .h-7 {
     height: calc(var(--spacing) * 7);
   }
@@ -962,6 +956,12 @@
   }
   .h-auto {
     height: auto;
+  }
+  .h-fit {
+    height: fit-content;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -1011,6 +1011,12 @@
   .w-26 {
     width: calc(var(--spacing) * 26);
   }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  .w-44 {
+    width: calc(var(--spacing) * 44);
+  }
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
@@ -1050,6 +1056,9 @@
   .max-w-130 {
     max-width: calc(var(--spacing) * 130);
   }
+  .max-w-180 {
+    max-width: calc(var(--spacing) * 180);
+  }
   .max-w-\[600px\] {
     max-width: 600px;
   }
@@ -1058,6 +1067,9 @@
   }
   .max-w-screen {
     max-width: 100vw;
+  }
+  .min-w-180 {
+    min-width: calc(var(--spacing) * 180);
   }
   .min-w-screen {
     min-width: 100vw;
@@ -1473,8 +1485,14 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
   }
   .gap-16 {
     gap: calc(var(--spacing) * 16);
@@ -1658,6 +1676,10 @@
     border-bottom-left-radius: 0.25rem;
   }
   .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
@@ -1998,6 +2020,9 @@
   }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
+  }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
@@ -2766,9 +2791,9 @@
       height: calc(var(--spacing) * 80);
     }
   }
-  .md\:w-1\/3 {
+  .md\:w-2\/3 {
     @media (width >= 48rem) {
-      width: calc(1/3 * 100%);
+      width: calc(2/3 * 100%);
     }
   }
   .md\:w-3\/4 {
@@ -2791,9 +2816,19 @@
       width: calc(var(--spacing) * 60);
     }
   }
+  .md\:w-100 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 100);
+    }
+  }
   .md\:w-170 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 170);
+    }
+  }
+  .md\:w-200 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 200);
     }
   }
   .md\:w-\[140px\] {
@@ -2942,6 +2977,11 @@
       width: calc(1/3 * 100%);
     }
   }
+  .lg\:w-2\/3 {
+    @media (width >= 64rem) {
+      width: calc(2/3 * 100%);
+    }
+  }
   .lg\:w-3\/5 {
     @media (width >= 64rem) {
       width: calc(3/5 * 100%);
@@ -2972,9 +3012,19 @@
       width: calc(var(--spacing) * 72);
     }
   }
+  .lg\:w-200 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 200);
+    }
+  }
   .lg\:w-220 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 220);
+    }
+  }
+  .lg\:w-240 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 240);
     }
   }
   .lg\:w-250 {
@@ -3051,6 +3101,16 @@
       height: calc(var(--spacing) * 100);
     }
   }
+  .xl\:w-1\/2 {
+    @media (width >= 80rem) {
+      width: calc(1/2 * 100%);
+    }
+  }
+  .xl\:w-1\/3 {
+    @media (width >= 80rem) {
+      width: calc(1/3 * 100%);
+    }
+  }
   .xl\:w-2\/5 {
     @media (width >= 80rem) {
       width: calc(2/5 * 100%);
@@ -3069,6 +3129,16 @@
   .xl\:w-280 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 280);
+    }
+  }
+  .xl\:w-300 {
+    @media (width >= 80rem) {
+      width: calc(var(--spacing) * 300);
+    }
+  }
+  .xl\:w-400 {
+    @media (width >= 80rem) {
+      width: calc(var(--spacing) * 400);
     }
   }
   .xl\:grid-cols-3 {
