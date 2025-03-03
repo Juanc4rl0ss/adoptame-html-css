@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Adopción | Adóptame</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-main-light0 text-main-dark flex flex-col min-h-screen">
+    <!-- Encabezado principal -->
+<header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div class="flex justify-between items-center h-16">
+          <!-- Menú para escritorio -->
+          <div class="flex items-center justify-between w-full px-6">
+              <!-- Logo alineado a la izquierda -->
+              <div class="flex items-center">
+                  <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
+                  <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
+              </div>
+              <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
+                  <a href="adoptar.html"
+                  class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a>
+                  <a href="contacto.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Contacto</a>
+                  <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
+                  <!-- <a href="#"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                  <!-- <a href="./adoptar.html"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a> -->
+                  <a href="informacion.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2">Más Información</a>
+                  <!-- <a href="#"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a> -->
+              </nav>
+              <!-- Ícono de usuario alineado a la derecha -->
+              <div class="hidden md:flex">
+                  <a href="login.html"><img src="img/user.png" alt="Usuario" class="h-12 w-auto"></a>
+              </div>
+          </div>
+          <!-- Menú hamburguesa  -->
+          <div class="md:hidden relative w-full flex justify-end">
+              <!-- Checkbox oculto para manejar el menú -->
+              <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+              <!-- Botón hamburguesa alineado a la derecha -->
+              <label for="menu-toggle" class="cursor-pointer">
+                  <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
+              </label>
+
+              <!-- Menú desplegable en móviles -->
+              <div#
+                  class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3 pb-3">
+                  <a href="adoptar.html"
+                  class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a>
+                  <a href="contacto.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Contacto</a>
+                  <!-- SELECTED <a href="#"
+                      class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                  <a href="informacion.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Más
+                      Información</a>
+                  <a href="login.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar
+                      sesión</a>
+              </div#>
+          </div>
+      </div>
+  </nav>
+</header>
+
+    <main class="items-center text-center font-main-barlow">
+      <section
+        class="bg-main-light1 w-11/12 lg:w-240 xl:w-280 mx-auto my-8 mt-24 p-8 rounded-lg"
+      >
+        <h1 class="font-main-quicksand font-semibold text-2xl lg:text-3xl">
+          Formulario de Adopción
+        </h1>
+
+        <form
+          id="adopcion-form"
+          class="mt-6 w-full mx-auto text-left grid grid-cols-2 gap-8"
+          action="detalles-animal.html"
+          method="POST"
+        >
+          <!-- Información del Peludito -->
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 col-span-2 lg:col-span-1 h-full">
+            <legend class="text-lg font-bold text-main-dark">
+              Información del Peludito
+            </legend> 
+
+            <label for="tipo_animal">Tipo de Animal: <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <select
+              id="tipo_animal"
+              name="tipo_animal"
+              required
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            >
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+              <option value="otro">Otro</option>
+            </select>
+
+            <label for="nombre_peludo">Nombre: <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input
+              type="text"
+              id="nombre_peludo"
+              name="nombre_peludo"
+              required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
+              placeholder="Ejemplo: Max, Luna"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+
+            <!-- Género del Animal -->
+            <label for="genero_animal">Género: <span class="text-main-fuchsia font-bold text-lg">*</span></label> 
+            <select
+              id="genero_animal"
+              name="genero_animal"
+              required
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            >
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="macho">Macho</option>
+              <option value="hembra">Hembra</option>
+            </select>
+          </fieldset>
+
+          <!-- Información Personal -->
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 h-full col-span-2 lg:col-span-1">
+            <legend class="text-lg font-bold text-main-dark">
+              Información Personal
+            </legend>
+
+            <label for="nombre">Nombre: <span class="text-main-fuchsia font-bold text-lg">*</span></label> 
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
+              placeholder="Tu nombre"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+
+            <label for="apellidos">Apellidos:</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,128}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 128 caracteres"
+              placeholder="Tus apellidos"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+
+            <label for="telefono">Teléfono de Contacto:</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              pattern="[0-9]{9}"
+              title="Introduce un número de teléfono válido. 9 dígitos sin espacios ni guiones"
+              placeholder="9 dígitos"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+  
+            <label for="email">Correo Electrónico:  <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}"
+              title="Introduce un correo válido en el formato usuario@dominio.com."
+              required
+              placeholder="Ingresa tu correo"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+          </fieldset>
+
+          <!-- Dirección del Adoptante -->
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 h-full col-span-2 lg:col-span-1">
+            <legend class="text-lg font-bold text-main-dark">
+              Dirección del Adoptante
+            </legend>
+            <label for="calle">Calle: <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input type="text" 
+                   id="calle" 
+                   name="calle" 
+                   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,50}" 
+                   title="Debe contener solo letras y espacios, con un mínimo de 2 y un máximo de 50 caracteres." 
+                   required 
+                   placeholder="Ejemplo: Gran Vía, Libertad" 
+                   class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-2" />
+            
+
+        <label for="numero">Número: <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+        <input type="text" 
+              id="numero" 
+              name="numero" 
+              pattern="^[0-9]{1,5}[A-Za-z]?$"
+              title="Debe contener entre 1 y 5 dígitos, y opcionalmente una letra al final (Ej: 123 o 45B)."
+              required 
+              placeholder="Ejemplo: 23, 100, 45B" 
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mb-2" />
+
+
+            <label for="ciudad">Ciudad: <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input
+              type="text"
+              id="ciudad"
+              name="ciudad"
+              required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
+              placeholder="Tu ciudad"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+
+            <label for="provincia">Provincia: <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input
+              type="text"
+              id="provincia"
+              name="provincia"
+              required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
+              placeholder="Tu provincia"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+
+            <label for="codigo_postal">Código Postal: <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input
+              type="text"
+              id="codigo_postal"
+              name="codigo_postal"
+              pattern="[0-9]{5}"
+              title="Introduce un código postal válido (5 dígitos)"
+              required
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2"
+            />
+          </fieldset>
+
+          <!-- Entorno del Adoptante -->
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 h-full pb-2 col-span-2 lg:col-span-1">
+            <legend class="text-lg font-bold text-main-dark">Entorno del Adoptante</legend>
+        
+            <label class="block">¿En qué tipo de vivienda resides? <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input type="radio" id="casa" name="tipo_vivienda" value="casa" required>
+            <label for="casa" class="mr-2">Casa</label>
+        
+            <input type="radio" id="departamento" name="tipo_vivienda" value="departamento">
+            <label for="departamento">Departamento</label>
+        
+            <label class="block mt-2">¿Cuántas personas viven en tu hogar? <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input type="number" id="personas_hogar" name="personas_hogar" min="1" required 
+                class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green mb-2">
+        
+            <label class="block">¿Todas las personas en tu hogar están de acuerdo con la adopción? <span class="text-main-fuchsia font-bold text-lg">*</span></label>
+            <input type="radio" id="acuerdo_si" name="acuerdo_adopcion" value="si" required>
+            <label for="acuerdo_si" class="mr-2">Sí</label>
+        
+            <input type="radio" id="acuerdo_no" name="acuerdo_adopcion" value="no">
+            <label for="acuerdo_no">No</label>
+        </fieldset>
+
+          <!-- Preguntas abiertas -->
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 h-full col-span-2">
+            <legend class="text-lg font-bold text-main-dark">
+              Preguntas al Adoptante
+            </legend>
+
+            <label for="experiencia"
+              >¿Qué experiencia previa tiene con animales? <span class="text-main-fuchsia font-bold text-lg">*</span></label
+            >
+            <textarea
+              id="experiencia"
+              name="experiencia"
+              required
+              minlength="5"
+              maxlength="500"
+              class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green mb-2"
+            ></textarea>
+
+            <label for="entorno"
+              >¿Cómo será el entorno en el que vivirá el animal?</label
+            >
+            <textarea
+              id="entorno"
+              name="entorno"
+              minlength="5"
+              maxlength="500"
+              class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green mb-2"
+            ></textarea>
+
+            <label for="cuidado"
+              >¿Cómo planea manejar el cuidado y los gastos asociados con el
+              animal?</label
+            >
+            <textarea
+              id="cuidado"
+              name="cuidado"
+              minlength="5"
+              maxlength="500"
+              class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green mb-2"
+            ></textarea>
+          </fieldset>
+
+          <!-- Compromiso de Adopción -->
+          <fieldset class="border border-main-fuchsia p-4 rounded-lg h-full col-span-2">
+            <legend class="text-lg font-bold text-main-dark">
+              Compromiso de Adopción 
+            </legend>
+            <input
+              type="checkbox"
+              id="responsabilidad"
+              name="responsabilidad"
+              required
+            />
+            <label for="responsabilidad"
+              >Entiendo que adoptar una mascota es un compromiso de por vida y
+              me responsabilizo de su bienestar. <span class="text-main-fuchsia font-bold text-lg">*</span></label
+            >
+          </fieldset>
+          <!-- Campos obligatorios -->
+        <p class="flex col-span-2 text-lg">
+          <span class="text-main-fuchsia font-bold text-lg">*</span> Campos obligatorios
+        </p>
+
+          <!-- Botones -->
+          <div class="mb-4 flex justify-center col-span-2">
+            <button
+              type="submit"
+              class="bg-main-green font-main-quicksand h-11 w-32 rounded-lg font-bold hover:bg-main-lightgreen transition cursor-pointer"
+            >
+              Adoptar
+            </button>
+
+            <button
+              type="reset"
+              class="ml-4 bg-main-gray font-main-quicksand h-11 w-32 rounded-lg font-bold hover:bg-main-lightgray transition border-1 border-main-fuchsia cursor-pointer hover:bg-main-pink"
+            >
+              Reiniciar
+            </button>
+          </div>
+          <p class="font-main-quicksand font-semibold text-main-dark mt-4 col-span-2 text-center">
+            🐾 Recuerda que adoptar un animal es un compromiso para toda la vida. Dale amor y cuidados siempre. 💖
+        </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="w-full bg-main-pink py-8 mt-auto text-main-dark text-center">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20">
+              <!-- Sobre Nosotros -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Sobre nosotros
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestros métodos</a></li>
+                      <li><a href="contacto.html" class="hover:underline font-main-barlow">Contacto</a></li>
+                  </ul>
+              </div>
+              <!-- Servicios -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Servicios
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Rescate de animales</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Educación ambiental</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Voluntariado</a></li>
+                  </ul>
+              </div>
+              <!-- Proyectos -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Proyectos
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Especies en peligro</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Adopciones responsables</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Apadrinamiento</a></li>
+                  </ul>
+              </div>
+              <!-- Síguenos -->
+              <div class="text-left w-[220px] mx-auto">
+                  <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                      Síguenos
+                  </h3>
+                  <ul class="mt-3 space-y-2">
+                      <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                      <li><a href="#" class="hover:underline font-main-barlow">Contenido</a></li>
+                  </ul>
+                  <!-- Iconos redes sociales -->
+                  <div class="mt-2 text-xl space-x-4">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
