@@ -78,9 +78,9 @@
 <body class="bg-main-light0 text-main-dark flex flex-col min-h-screen">
 
   <!-- Contenido principal -->
-  <main class="items-center text-center">
+  <main class="items-center text-center font-main-barlow">
 
-    <section class="bg-main-light1 w-11/12 max-w-lg mx-auto mb-16 mt-30 p-8 rounded-lg">
+    <section class="bg-main-light1 w-11/12 max-w-lg mx-auto mb-8 mt-24 p-8 rounded-lg">
 
       <!-- Título -->
       <h1 class="font-main-quicksand font-semibold text-2xl lg:text-3xl">
@@ -88,7 +88,7 @@
       </h1>
 
       <!-- Formulario -->
-      <form class="mt-6 w-4/5 mx-auto text-left">
+      <form action="index.html" method="post" class="mt-6 w-4/5 mx-auto text-left">
         <!-- Campo de Email -->
         <div class="mb-4">
           <label for="email" class="block font-main-quicksand mb-1 text-main-dark">
@@ -103,7 +103,7 @@
           <label for="password" class="block font-main-quicksand mb-1 text-main-dark">
             Contraseña:
           </label>
-          <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña"
+          <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña" minlength="5" maxlength="16"
             class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green" />
         </div>
 
@@ -117,7 +117,7 @@
         <!-- Botón de inicio de sesión -->
         <div class="flex justify-center">
           <button type="submit"
-            class="bg-main-green font-main-quicksand py-2 px-4 rounded-xl font-bold hover:bg-main-lightgreen transition md:text-lg">
+            class="bg-main-green font-main-quicksand h-11 w-42 rounded-lg font-bold hover:bg-main-lightgreen transition text-xl cursor-pointer">
             Iniciar Sesión
           </button>
         </div>
