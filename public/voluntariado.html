@@ -27,25 +27,48 @@
               Información Personal
             </legend>
 
-            <label for="nombre">Nombre Completo:</label>
+            <label for="nombre">Nombre:</label>
             <input
               type="text"
               id="nombre"
               name="nombre"
               required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
               placeholder="Tu nombre"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
+
+              <!-- Apellidos -->
+          <div class="mb-4">
+            <label
+              for="apellidos"
+              class="block font-main-quicksand mb-1 text-main-dark"
+            >
+              Apellidos:
+            </label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,128}"
+              maxlength="128"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 128 caracteres"
+                placeholder="Ingresa tus apellidos"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
+            />
+          </div>
 
             <label for="telefono">Teléfono de Contacto:</label>
             <input
               type="tel"
               id="telefono"
               name="telefono"
-              pattern="[0-9]{10}"
-              title="Introduce un número de 10 dígitos"
+              pattern="[0-9]{9}"
+              title="Introduce un número de teléfono válido. 9 dígitos sin espacios ni guiones"
               required
-              placeholder="10 dígitos"
+              placeholder="9 dígitos"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
 
@@ -54,8 +77,10 @@
               type="email"
               id="email"
               name="email"
+              pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}"
+              title="Introduce un correo válido en el formato usuario@dominio.com."
               required
-              placeholder="Tu correo electrónico"
+              placeholder="Ingresa tu correo"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
             />
           </fieldset>
@@ -64,17 +89,12 @@
           <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4">
             <legend class="text-lg font-bold text-main-dark">Disponibilidad</legend>
 
-            <label class="block mb-2">¿Cuántos días a la semana puedes ser voluntario?</label>
-            <input
-              type="number"
-              id="dias_disponibles"
-              name="dias_disponibles"
-              min="1"
-              max="7"
-              required
-              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"
-            />
-
+            <label for="dias_disponibles">¿Cuántos días a la semana puedes ser voluntario?</label>
+            <input type="text" id="dias_disponibles" name="dias_disponibles" required
+              pattern="[1-7]" title="Introduce un número del 1 al 7."
+              placeholder="Ingresa un número entre 1 y 7"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green" />
+          
             <label class="block mt-4">¿En qué horario estarías disponible?</label>
             <select
               id="horario"
@@ -116,6 +136,8 @@
               id="habilidades"
               name="habilidades"
               required
+              minlength="5"
+              maxlength="500"
               placeholder="Ejemplo: Cuidados de animales, redes sociales, educación, recolección de fondos..."
               class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-32 focus:outline-none focus:border-main-green"
             ></textarea>
@@ -145,6 +167,8 @@
               type="text"
               id="otro_interes"
               name="otro_interes"
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,64}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 64 caracteres"
               placeholder="Especifica otra área si aplica"
               class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg mt-2 focus:outline-none focus:border-main-green"
             />
@@ -160,6 +184,8 @@
             <textarea
               id="motivo"
               name="motivo"
+              minlength="5"
+              maxlength="500"
               required
               placeholder="Cuéntanos tu motivación para ayudar..."
               class="border bg-main-white border-main-fuchsia w-full p-4 rounded-lg h-40 focus:outline-none focus:border-main-green"
