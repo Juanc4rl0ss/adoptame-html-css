@@ -1,165 +1,216 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="favicon.ico" href="img/favicon.ico">
-    <title>Contacto | Adóptame</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="favicon.ico" href="img/favicon.ico" />
+  <title>Contacto | Adóptame</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
-    <!-- Encabezado principal -->
+<body class="flex flex-col min-h-screen">
+  <!-- Encabezado principal -->
 <header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div class="flex justify-between items-center h-16">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div class="flex justify-between items-center h-16">
+          <!-- Menú para escritorio -->
+          <div class="flex items-center justify-between w-full px-6">
+              <!-- Logo alineado a la izquierda -->
+              <div class="flex items-center">
+                  <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
+                  <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
+              </div>
+              <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
+                  <a href="adoptar.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Adoptar</a>
+                  <a href="contacto.html"
+                  class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a>
+                  <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
+                  <!-- <a href="#"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                  <!-- <a href="./adoptar.html"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a> -->
+                  <a href="informacion.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2">Más Información</a>
+                  <!-- <a href="#"
+                      class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a> -->
+              </nav>
+              <!-- Ícono de usuario alineado a la derecha -->
+              <div class="hidden md:flex">
+                  <a href="login.html"><img src="img/user.png" alt="Usuario" class="h-12 w-auto"></a>
+              </div>
+          </div>
+          <!-- Menú hamburguesa  -->
+          <div class="md:hidden relative w-full flex justify-end">
+              <!-- Checkbox oculto para manejar el menú -->
+              <input type="checkbox" id="menu-toggle" class="peer hidden">
 
-            <!-- Menú para escritorio -->
-            <div class="flex items-center justify-between w-full px-6">
-                <!-- Logo alineado a la izquierda -->
-                <div class="flex items-center">
-                    <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
-                    <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
-                </div>
+              <!-- Botón hamburguesa alineado a la derecha -->
+              <label for="menu-toggle" class="cursor-pointer">
+                  <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
+              </label>
 
-                <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
-                    <a href="adoptar.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Adoptar</a>
-                    <a href="contacto.html" class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a>
-                    <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
-                    <!-- <a href="#"
-                        class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
-                    <!-- <a href="./adoptar.html"
-                        class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a> -->
-                    <a href="informacion.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2">Más Información</a>
-
-                    <!-- <a href="#"
-                        class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a> -->
-                </nav>
-                
-
-                <!-- Ícono de usuario alineado a la derecha -->
-                <div class="hidden md:flex">
-                    <img src="img/user.png" alt="Usuario" class="h-12 w-auto">
-                </div>
-            </div>
-
-
-            <!-- Menú hamburguesa  -->
-            <div class="md:hidden relative w-full flex justify-end">
-                <!-- Checkbox oculto para manejar el menú -->
-                <input type="checkbox" id="menu-toggle" class="peer hidden">
-
-                <!-- Botón hamburguesa alineado a la derecha -->
-                <label for="menu-toggle" class="cursor-pointer">
-                    <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
-                </label>
-
-                <!-- Menú desplegable en móviles -->
-                <div#
-                    class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3">
-                    <a href="adoptar.html"
-                        class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Adoptar</a>
-                    <a href="contacto.html"
-                    class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a>
-                    <!-- SELECTED <a href="#"
-                        class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
-                    <a href="informacion.html"
-                        class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Más
-                        Información</a>
-                    <a href="login.html"
-                        class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar sesión</a>
-                </div#>
-
-            </div>
-
-        </div>
-    </nav>
+              <!-- Menú desplegable en móviles -->
+              <div#
+                  class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3 pb-3">
+                  <a href="adoptar.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Adoptar</a>
+                  <a href="contacto.html"
+                  class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a>
+                  <!-- SELECTED <a href="#"
+                      class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
+                  <a href="informacion.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Más
+                      Información</a>
+                  <a href="login.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar
+                      sesión</a>
+              </div#>
+          </div>
+      </div>
+  </nav>
 </header>
 
-    <main class="bg-main-light0 text-main-dark flex items-center justify-center min-h-screen ">
-        <section class="md:w-3/5 bg-main-light1 p-6 md:p-10 rounded-lg shadow-lg text-center">
-            <h1 class="text-2xl font-medium font-main-quicksand mb-6">Contacto</h1>
+  <main class="bg-main-light0 text-main-dark flex items-center justify-center font-main-barlow pt-24 pb-8">
+    <section class="w-11/12 max-w-5xl mx-auto bg-main-light1 p-6 rounded-lg text-center">
+      <h1 class="text-2xl font-bold font-main-quicksand mb-6">Contacto</h1>
 
-            <div class="flex flex-col gap-6 font-main-barlow">
-                <div class="flex items-center gap-4 justify-center">
-                    <span class="material-icons-outlined text-3xl leading-none w-10 text-center">call</span>
-                    <p class="text-lg ">+34 610 200 325</p>
-                </div>
+      <!-- Formulario de Contacto -->
+      <form action="index.html" method="post" class="mt-6 w-full max-w-3xl mx-auto text-left">
+        <fieldset class="p-4 border border-main-fuchsia bg-main-light0 rounded-lg">
+          <legend class="ml-4 md:ml-10 text-lg font-main-quicksand font-semibold text-main-dark">
+            ¡Contáctanos!
+          </legend>
 
-                <div class="flex items-center gap-4 justify-center">
-                    <span class="material-icons-outlined text-3xl leading-none w-10 text-center">mail</span>
-                    <p class="text-lg ">contacto@adoptame.com</p>
-                </div>
+          <!-- Campo de Nombre -->
+          <div class="mb-4 mr-10 md:mr-16 ml-10 md:ml-16">
+            <label for="nombre" class="block mb-1 text-main-dark">
+              Nombre Completo: <span class="text-main-fuchsia font-bold text-lg">*</span>
+            </label>
+            <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,256}"
+              title="Solo caracteres alfabéticos. Mínimo 2 y máximo 256 caracteres"
+              placeholder="Ingresa tu nombre completo"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green" />
+          </div>
 
-                <div class="flex items-center gap-4 justify-center">
-                    <span class="material-icons-outlined text-3xl leading-none w-10 text-center">place</span>
-                    <p class="text-lg ">Calle Adopción 32, Pamplona, España</p>
-                </div>
+          <!-- Campo de Email -->
+          <div class="mb-4 mr-10 md:mr-16 ml-10 md:ml-16">
+            <label for="email" class="block mb-1 text-main-dark">
+              Email: <span class="text-main-fuchsia font-bold text-lg">*</span>
+            </label>
+            <input type="email" id="email" name="email" required pattern="[^@\s]+@[^@\s]+.[^@\s]+"
+              title="Por favor, introduce una dirección de correo electrónico válida." placeholder="Ingresa tu correo"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green" />
+          </div>
+
+          <!-- Campo de Asunto -->
+          <div class="mb-4 mr-10 md:mr-16 ml-10 md:ml-16">
+            <label for="asunto" class="block mb-1 text-main-dark">
+              Asunto: <span class="text-main-fuchsia font-bold text-lg">*</span>
+            </label>
+            <textarea id="asunto" name="asunto" required minlength="5" placeholder="Ingresa el asunto" rows="6"
+              class="border bg-main-white border-main-fuchsia w-full p-2 rounded-lg focus:outline-none focus:border-main-green"></textarea>
+          </div>
+
+          <!-- Acepto términos y condiciones -->
+          <div class="mr-10 md:mr-16 ml-10 md:ml-16 flex items-center gap-2">
+            <input type="checkbox" id="terminos" name="terminos" required
+              class="appearance-none w-3 h-3 border border-main-fuchsia cursor-pointer bg-white checked:bg-main-fuchsia checked:border-main-fuchsia" />
+            <label for="terminos" class="text-sm text-main-dark">
+              Acepto los
+              <a href="#" class="text-main-fuchsia hover:underline">términos y condiciones</a> <span class="text-main-fuchsia font-bold text-lg">*</span>
+            </label>
+          </div>
+
+          <!-- Campos obligatorios -->
+        <p class="mb-4 mr-10 md:mr-16 ml-10 md:ml-16 flex items-center gap-2 text-sm">
+          <span class="text-main-fuchsia font-bold text-lg">*</span> Campos obligatorios
+        </p>
+
+          <!-- Botón de enviar -->
+          <div class="mb-4 flex justify-center">
+            <button type="submit"
+              class="mr-4 bg-main-green font-main-quicksand w-36 h-11 rounded-lg font-bold hover:bg-main-lightgreen transition text-lg cursor-pointer">
+              Enviar
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <div class="flex flex-col gap-6 font-main-barlow mt-10">
+        <div class="flex items-center gap-4 justify-center">
+          <span class="material-symbols-outlined text-3xl leading-none w-10 text-center">call</span>
+          <p class="text-lg">+34 610 200 325</p>
+        </div>
+
+        <div class="flex items-center gap-4 justify-center">
+          <span class="material-symbols-outlined text-3xl leading-none w-10 text-center">mail</span>
+          <p class="text-lg">contacto@adoptame.com</p>
+        </div>
+
+        <div class="flex items-center gap-4 justify-center">
+          <span class="material-symbols-outlined text-3xl leading-none w-10 text-center">place</span>
+          <p class="text-lg">Calle Adopción 32, Pamplona, España</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-main-pink py-8 mt-auto text-main-dark text-center">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20">
+            <!-- Sobre Nosotros -->
+            <div class="text-left w-[220px] mx-auto">
+                <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                    Sobre nosotros
+                </h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                    <li><a href="#" class="hover:underline font-main-barlow">Nuestros métodos</a></li>
+                    <li><a href="contacto.html" class="hover:underline font-main-barlow">Contacto</a></li>
+                </ul>
             </div>
-        </section>
-    </main>
-
-    <footer class="w-full bg-main-pink py-8 mt-auto text-main-dark text-center">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center sm:text-left">
-    
-                <!-- Sobre Nosotros -->
-                <div class=" w-[220px] mx-auto">
-                    <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand text-center">
-                        Sobre nosotros
-                    </h3>
-                    <ul class="mt-3 space-y-2">
-                        <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
-                        <li><a href="#" class="hover:underline font-main-barlow">Nuestros métodos</a></li>
-                        <li><a href="contacto.html" class="hover:underline font-main-barlow">Contacto</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Servicios -->
-                <div class="w-[220px] mx-auto">
-                    <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand  text-center">
-                        Servicios
-                    </h3>
-                    <ul class="mt-3 space-y-2">
-                        <li><a href="#" class="hover:underline font-main-barlow">Rescate de animales</a></li>
-                        <li><a href="#" class="hover:underline font-main-barlow">Educación ambiental</a></li>
-                        <li><a href="#" class="hover:underline font-main-barlow">Voluntariado</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Proyectos -->
-                <div class="w-[220px] mx-auto">
-                    <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand text-center">
-                        Proyectos
-                    </h3>
-                    <ul class="mt-3 space-y-2">
-                        <li><a href="#" class="hover:underline font-main-barlow">Especies en peligro</a></li>
-                        <li><a href="#" class="hover:underline font-main-barlow">Adopciones responsables</a></li>
-                        <li><a href="#" class="hover:underline font-main-barlow">Apadrinamiento</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Síguenos -->
-                <div class="w-[220px] mx-auto">
-                    <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
-                        Síguenos
-                    </h3>
-                    <ul class="mt-3 space-y-2">
-                        <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
-                        <li><a href="#" class="hover:underline font-main-barlow">Contenido</a></li>
-                    </ul>
-    
-                    <!-- Iconos redes sociales -->
-                    <div class="mt-2 text-xl space-x-4">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+            <!-- Servicios -->
+            <div class="text-left w-[220px] mx-auto">
+                <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                    Servicios
+                </h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:underline font-main-barlow">Rescate de animales</a></li>
+                    <li><a href="#" class="hover:underline font-main-barlow">Educación ambiental</a></li>
+                    <li><a href="#" class="hover:underline font-main-barlow">Voluntariado</a></li>
+                </ul>
+            </div>
+            <!-- Proyectos -->
+            <div class="text-left w-[220px] mx-auto">
+                <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                    Proyectos
+                </h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:underline font-main-barlow">Especies en peligro</a></li>
+                    <li><a href="#" class="hover:underline font-main-barlow">Adopciones responsables</a></li>
+                    <li><a href="#" class="hover:underline font-main-barlow">Apadrinamiento</a></li>
+                </ul>
+            </div>
+            <!-- Síguenos -->
+            <div class="text-left w-[220px] mx-auto">
+                <h3 class="font-semibold text-lg border-b-2 border-main-dark inline-block pb-1 font-main-quicksand">
+                    Síguenos
+                </h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:underline font-main-barlow">Nuestro equipo</a></li>
+                    <li><a href="#" class="hover:underline font-main-barlow">Contenido</a></li>
+                </ul>
+                <!-- Iconos redes sociales -->
+                <div class="mt-2 text-xl space-x-4">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
+
 </html>
