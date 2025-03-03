@@ -9,76 +9,68 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body class="bg-main-light0 text-main-dark">
+<body class="bg-main-light0 text-main-dark flex flex-col min-h-screen">
   <!-- Encabezado principal -->
-  <header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+<header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <div class="flex justify-between items-center h-16">
-
-        <!-- Menú para escritorio -->
-        <div class="flex items-center justify-between w-full px-6">
-          <!-- Logo alineado a la izquierda -->
-          <div class="flex items-center">
-            <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
-            <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
-          </div>
-
-          <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
-            <a href="adoptar.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Adoptar</a>
-            <a href="contacto.html"
-              class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Contacto</a>
-            <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
-            <!-- <a href="#"
+          <!-- Menú para escritorio -->
+          <div class="flex items-center justify-between w-full px-6">
+              <!-- Logo alineado a la izquierda -->
+              <div class="flex items-center">
+                  <img src="img/logo.png" alt="Logo" class="h-10 w-auto mr-2">
+                  <a href="index.html" class="text-3xl font-bold text-main-fuchsia font-main-quicksand ">Adóptame</a>
+              </div>
+              <nav class="hidden md:flex flex-grow justify-evenly text-main-dark max-w-[600px]">
+                  <a href="adoptar.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Adoptar</a>
+                  <a href="contacto.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2 ">Contacto</a>
+                  <!-- Las líneas comentadas corresponden al botón con el Active maquetado -->
+                  <!-- <a href="#"
                       class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
-            <!-- <a href="./adoptar.html"
+                  <!-- <a href="./adoptar.html"
                       class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Adoptar</a> -->
-            <a href="informacion.html" class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2">Más
-              Información</a>
-
-            <!-- <a href="#"
+                  <a href="informacion.html"
+                      class="font-bold hover:text-main-fuchsia font-main-quicksand px-2 py-2">Más Información</a>
+                  <!-- <a href="#"
                       class="font-bold bg-main-pink px-2 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Más Información</a> -->
-          </nav>
-
-
-          <!-- Ícono de usuario alineado a la derecha -->
-          <div class="hidden md:flex">
-            <img src="img/user.png" alt="Usuario" class="h-12 w-auto">
+              </nav>
+              <!-- Ícono de usuario alineado a la derecha -->
+              <div class="hidden md:flex">
+                  <a href="login.html"><img src="img/user.png" alt="Usuario" class="h-12 w-auto"></a>
+              </div>
           </div>
-        </div>
+          <!-- Menú hamburguesa  -->
+          <div class="md:hidden relative w-full flex justify-end">
+              <!-- Checkbox oculto para manejar el menú -->
+              <input type="checkbox" id="menu-toggle" class="peer hidden">
 
+              <!-- Botón hamburguesa alineado a la derecha -->
+              <label for="menu-toggle" class="cursor-pointer">
+                  <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
+              </label>
 
-        <!-- Menú hamburguesa  -->
-        <div class="md:hidden relative w-full flex justify-end">
-          <!-- Checkbox oculto para manejar el menú -->
-          <input type="checkbox" id="menu-toggle" class="peer hidden">
-
-          <!-- Botón hamburguesa alineado a la derecha -->
-          <label for="menu-toggle" class="cursor-pointer">
-            <img src="img/menu-hamburger.png" alt="Menú" class="h-10 w-10">
-          </label>
-
-          <!-- Menú desplegable en móviles -->
-          <div#
-            class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3">
-            <a href="adoptar.html"
-              class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Adoptar</a>
-            <a href="contacto.html"
-              class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Contacto</a>
-            <!-- SELECTED <a href="#"
+              <!-- Menú desplegable en móviles -->
+              <div#
+                  class="absolute top-full right-[-8%] w-[240%] bg-main-light0 shadow-md hidden peer-checked:flex flex-col items-end mt-3 pb-3">
+                  <a href="adoptar.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Adoptar</a>
+                  <a href="contacto.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Contacto</a>
+                  <!-- SELECTED <a href="#"
                       class="block text-main-dark font-bold bg-main-pink text-right px-4 py-2 rounded-md font-main-quicksand hover:text-main-fuchsia">Contacto</a> -->
-            <a href="informacion.html"
-              class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Más
-              Información</a>
-            <a href="login.html"
-              class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar
-              sesión</a>
-          </div#>
-
-        </div>
-
+                  <a href="informacion.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Más
+                      Información</a>
+                  <a href="login.html"
+                      class="block font-main-quicksand font-bold py-2 px-4 text-right hover:text-main-fuchsia">Iniciar
+                      sesión</a>
+              </div#>
+          </div>
       </div>
-    </nav>
-  </header>
+  </nav>
+</header>
   <!-- Contenido de la página -->
   <main class="items-center text-center mt-12">
     <!-- Banner principal -->
