@@ -314,6 +314,7 @@
         console.log("Respuesta del servidor:", result); // Muestra el mensaje de la respuesta
 
         if (response.ok) {
+          localStorage.setItem("mensajeRegistro", "Usuario registrado con éxito. Inicia sesión.");
           formulario.reset(); // Resetea el formulario
           // Redirige al login después de asegurarse de que todo esté bien
           window.location.href = "login.html";  
