@@ -1,0 +1,21 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Backend para la aplicación Adoptame",
+    "main": "servidor.js",
+    "scripts": {
+      "start": "node servidor.js",
+      "dev": "nodemon servidor.js"
+    },
+    "dependencies": {
+      "express": "^4.21.2",
+      "cors": "^2.8.5",
+      "bcryptjs": "^2.4.3"
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.2"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  
