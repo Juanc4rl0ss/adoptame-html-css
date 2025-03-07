@@ -1,5 +1,26 @@
 {
-  "usuarios": [],
+  "usuarios": [
+    {
+      "nombre": "Juan Carlos",
+      "apellidos": "Ayala Leoz",
+      "dni": "72810585Z",
+      "email": "juancargalaxy@gmail.com",
+      "password": "Juancar123",
+      "repetir_password": "Juancar123",
+      "fecha_nacimiento": "1980-10-20",
+      "rol": "adoptante"
+    },
+    {
+      "nombre": "David",
+      "apellidos": "Pérez",
+      "dni": "70102233A",
+      "email": "david@gmail.com",
+      "password": "David123",
+      "repetir_password": "David123",
+      "fecha_nacimiento": "1978-09-20",
+      "rol": "adoptante"
+    }
+  ],
   "voluntarios": [
     {
       "nombre": "Juan Carlos",
@@ -18,9 +39,81 @@
       "otro_interes": "dddddddddddddddddd",
       "motivo": "dddddddddddddddd",
       "fecha_registro": "2025-03-07T08:29:59.348Z"
+    },
+    {
+      "nombre": "Juan Carlos",
+      "apellidos": "Ayala Leoz",
+      "telefono": "608174045",
+      "email": "juan_c1985@hotmail.es",
+      "dias_disponibles": "5",
+      "horario": "tarde",
+      "experiencia": "si",
+      "habilidades": "ffffffffffff",
+      "area_interes": [
+        "rescate",
+        "eventos"
+      ],
+      "otro_interes": "",
+      "motivo": "ffffffffffffffffff",
+      "fecha_registro": "2025-03-07T08:36:22.448Z"
+    },
+    {
+      "nombre": "Juan Carlos",
+      "apellidos": "Ayala Leoz",
+      "telefono": "608174045",
+      "email": "juan_c1985@hotmail.es",
+      "dias_disponibles": "7",
+      "horario": "noche",
+      "experiencia": "no",
+      "habilidades": "fffffffffffffffff",
+      "area_interes": [
+        "rescate",
+        "eventos",
+        "educacion"
+      ],
+      "otro_interes": "",
+      "motivo": "fffffffffffffffffffff",
+      "fecha_registro": "2025-03-07T09:11:57.303Z"
     }
   ],
-  "adopciones": [],
+  "adopciones": [
+    {
+      "tipo_animal": "perro",
+      "nombre_peludo": "Chuli",
+      "genero_animal": "macho",
+      "nombre": "Juan Carlos",
+      "apellidos": "Ayala Leoz",
+      "telefono": "608174045",
+      "email": "juan_c1985@hotmail.es",
+      "direccion": "Sanguesa 25, Pamplona, Navarra - 31005",
+      "tipo_vivienda": "casa",
+      "personas_hogar": "3",
+      "acuerdo_adopcion": "si",
+      "experiencia": "ggggggggggggggg",
+      "entorno": "gggggggggggggggg",
+      "cuidado": "ggggggggggggggggggggg",
+      "compromiso_cuidados": true,
+      "fecha_solicitud": "2025-03-07T08:57:52.058Z"
+    },
+    {
+      "tipo_animal": "gato",
+      "nombre_peludo": "Odie",
+      "genero_animal": "hembra",
+      "nombre": "Juan Carlos",
+      "apellidos": "Ayala Leoz",
+      "telefono": "608174045",
+      "email": "juan_c1985@hotmail.es",
+      "direccion": "Sanguesa 35, Pamplona, Navarra - 31005",
+      "tipo_vivienda": "casa",
+      "personas_hogar": "2",
+      "acuerdo_adopcion": "si",
+      "experiencia": "dddddddddddddddddd",
+      "entorno": "ddddddddddddddddddd",
+      "cuidado": "dddddddddddddddddddd",
+      "compromiso_cuidados": true,
+      "fecha_solicitud": "2025-03-07T09:01:50.144Z"
+    }
+  ],
   "mensajes": [
     {
       "nombre": "Bernardo",
@@ -56,6 +149,12 @@
       "nombre": "Juan Carlos",
       "email": "juancargalaxy@gmail.com",
       "asunto": "ddddddddddddddd",
+      "terminos": true
+    },
+    {
+      "nombre": "Juan Carlos",
+      "email": "Juancar@hotmail.es",
+      "asunto": "sssssssssssss",
       "terminos": true
     }
   ]

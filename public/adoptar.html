@@ -496,6 +496,16 @@
         </div>
     </div>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const mensaje = localStorage.getItem("mensajeAdopcion");
+    if (mensaje) {
+      alert(mensaje); 
+      localStorage.removeItem("mensajeAdopcion");
+    }
+  });
+</script>
+
 </body>
 
 </html>

@@ -10,6 +10,7 @@
 </head>
 
 <!-- Encabezado principal -->
+
 <body class="bg-main-light0 text-main-dark flex flex-col min-h-screen">
   <header class="bg-main-light0 shadow-md fixed top-0 left-0 w-full z-50 ">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -205,70 +206,50 @@
     const mensajeRegistro = localStorage.getItem("mensajeRegistro");
 
     if (mensajeRegistro) {
-        const mensajeDiv = document.createElement("div");
-        mensajeDiv.textContent = mensajeRegistro;
-        mensajeDiv.style.color = "green";
-        mensajeDiv.style.fontSize = "16px";
-        mensajeDiv.style.marginBottom = "10px";
-        mensajeDiv.style.textAlign = "center";
-        mensajeDiv.style.padding = "10px";
-        mensajeDiv.style.border = "1px solid green";
-        mensajeDiv.style.borderRadius = "5px";
-        mensajeDiv.style.backgroundColor = "#e6ffe6";
-
-        // Insertar el mensaje antes del formulario
-        formulario.parentNode.insertBefore(mensajeDiv, formulario);
-
-        // Eliminar el mensaje del localStorage después de mostrarlo
-        localStorage.removeItem("mensajeRegistro");
-
-        // Hacer que el mensaje desaparezca después de 7 segundos (7000 ms)
-        setTimeout(() => {
-            mensajeDiv.style.transition = "opacity 1s";
-            mensajeDiv.style.opacity = "0";
-            setTimeout(() => mensajeDiv.remove(), 1000);
-        }, 7000);
+      alert(mensajeRegistro); // Muestra el mensaje en un alert
+      localStorage.removeItem("mensajeRegistro"); // Elimina el mensaje después de mostrarlo
     }
+
 
     // Manejo del formulario de login
     formulario.addEventListener("submit", async (evento) => {
-        evento.preventDefault();
+      evento.preventDefault();
 
-        const formData = new FormData(formulario);
-        const data = {
-            email: formData.get("email"),
-            password: formData.get("password"),
-        };
+      const formData = new FormData(formulario);
+      const data = {
+        email: formData.get("email"),
+        password: formData.get("password"),
+      };
 
-        try {
-            // Enviar los datos al servidor mediante POST
-            const response = await fetch("http://localhost:3000/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
+      try {
+        // Enviar los datos al servidor mediante POST
+        const response = await fetch("http://localhost:3000/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
 
-            console.log("Status de la respuesta:", response.status);
-            const result = await response.json();
+        console.log("Status de la respuesta:", response.status);
+        const result = await response.json();
 
-            console.log("Respuesta del servidor:", result);
+        console.log("Respuesta del servidor:", result);
 
-            if (response.ok) {
-                // Guardar el usuario en localStorage
-                localStorage.setItem("usuario", JSON.stringify(result.usuario));
-                formulario.reset();
-                window.location.href = "index.html"; // Redirige al usuario a la página principal
-            } else {
-                alert(result.mensaje);
-            }
-        } catch (error) {
-            console.error("Error en la solicitud:", error);
-            alert("Hubo un error al iniciar sesión. Intenta de nuevo.");
+        if (response.ok) {
+          // Guardar el usuario en localStorage
+          localStorage.setItem("mensajeLogin","El usuario ha iniciado sesión correctamente");
+          formulario.reset();
+          window.location.href = "index.html"; // Redirige al usuario a la página principal
+        } else {
+          alert(result.mensaje);
         }
+      } catch (error) {
+        console.error("Error en la solicitud:", error);
+        alert("Hubo un error al iniciar sesión. Intenta de nuevo.");
+      }
     });
-</script>
+  </script>
 
 
 

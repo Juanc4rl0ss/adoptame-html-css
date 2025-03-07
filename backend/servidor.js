@@ -155,6 +155,94 @@ app.post("/voluntariado", (req, res) => {
   res.json({ mensaje: "Solicitud de voluntariado enviada correctamente. Nos pondremos en contacto contigo." });
 });
 
+const router = express.Router();
+
+// Endpoint para procesar solicitudes de adopción
+// Ruta para solicitud de adopción
+app.post("/adoptar", (req, res) => {
+  try {
+    const {
+      // Información del peludito
+      tipo_animal,
+      nombre_peludo,
+      genero_animal,
+
+      // Información personal
+      nombre,
+      apellidos,
+      telefono,
+      email,
+
+      // Dirección del adoptante
+      calle,
+      numero,
+      ciudad,
+      provincia,
+      codigo_postal,
+
+      // Entorno del adoptante
+      tipo_vivienda,
+      personas_hogar,
+      acuerdo_adopcion,
+
+      // Preguntas abiertas
+      experiencia,
+      entorno,
+      cuidado,
+
+      // Compromiso de adopción
+      responsabilidad
+    } = req.body;
+
+    console.log("Datos recibidos para adopción:", req.body); // Depuración
+
+    // Validación básica de campos obligatorios
+    if (!tipo_animal || !nombre_peludo || !genero_animal ||
+        !nombre || !apellidos || !telefono || !email ||
+        !calle || !numero || !ciudad || !provincia || !codigo_postal ||
+        !tipo_vivienda || !personas_hogar || !acuerdo_adopcion ||
+        !experiencia || !responsabilidad) {
+      return res.status(400).json({ mensaje: "Todos los campos obligatorios deben ser completados." });
+    }
+
+    // Cargar la base de datos
+    let datos = cargarDatos();
+
+    // Crear la nueva solicitud de adopción
+    const nuevaSolicitud = {
+      tipo_animal,
+      nombre_peludo,
+      genero_animal,
+      nombre,
+      apellidos,
+      telefono,
+      email,
+      direccion: `${calle} ${numero}, ${ciudad}, ${provincia} - ${codigo_postal}`,
+      tipo_vivienda,
+      personas_hogar,
+      acuerdo_adopcion,
+      experiencia,
+      entorno,
+      cuidado,
+      compromiso_cuidados: responsabilidad, // Renombrado para mantener compatibilidad con la estructura de datos existente
+      fecha_solicitud: new Date().toISOString(),
+    };
+
+    // Guardar la solicitud en la base de datos (archivo JSON)
+    datos.adopciones.push(nuevaSolicitud);
+    guardarDatos(datos);
+
+    console.log("Solicitud de adopción guardada correctamente:", nuevaSolicitud);
+
+    return res.status(201).json({ mensaje: "Solicitud de adopción enviada correctamente." });
+  } catch (error) {
+    console.error("Error al procesar la solicitud de adopción:", error);
+    return res.status(500).json({ mensaje: "Error interno del servidor." });
+  }
+});
+
+module.exports = router;
+
 
 // Iniciar el servidor
 app.listen(PUERTO, () => {
