@@ -71,6 +71,35 @@ app.post("/registro", (req, res) => {
 
 });
 
+// Ruta para registro
+app.post("/contacto", (req, res) => {
+  // Destructura todos los datos recibidos desde el formulario
+  const {
+    nombre,
+    email,
+    asunto,
+    terminos,
+  } = req.body;
+
+  console.log("Datos recibidos:", req.body);  // Verifica los datos recibidos
+
+  let datos = cargarDatos();
+
+  // Guarda todos los datos del usuario
+  datos.mensajes.push({
+    nombre,
+    email,
+    asunto,
+    terminos
+  });
+
+  // Guarda los datos en el archivo JSON
+  guardarDatos(datos);
+
+  // Responde con un mensaje de éxito
+  res.json({ mensaje: "Se ha enviado la solicitud correctamente" });
+
+});
 // Ruta para iniciar sesión
 app.post("/login", (req, res) => {
   try {

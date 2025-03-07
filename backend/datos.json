@@ -2,5 +2,42 @@
   "usuarios": [],
   "voluntarios": [],
   "adopciones": [],
-  "mensajes": []
+  "mensajes": [
+    {
+      "nombre": "Bernardo",
+      "email": "bernardo@gmail.es",
+      "asunto": "sssssssssssssssss",
+      "terminos": true
+    },
+    {
+      "nombre": "Maria",
+      "email": "ivan@hotmail.es",
+      "asunto": "Como te va la vida?",
+      "terminos": true
+    },
+    {
+      "nombre": "Mari",
+      "email": "mari@gmail.es",
+      "asunto": "holaaaaa",
+      "terminos": true
+    },
+    {
+      "nombre": "Manuela",
+      "email": "manuela@gmail.es",
+      "asunto": "aaaaaaaaaaaaaaaaa",
+      "terminos": true
+    },
+    {
+      "nombre": "Sancho",
+      "email": "sancho@gmail.es",
+      "asunto": "Como te va la vida?",
+      "terminos": true
+    },
+    {
+      "nombre": "Juan Carlos",
+      "email": "juancargalaxy@gmail.com",
+      "asunto": "ddddddddddddddd",
+      "terminos": true
+    }
+  ]
 }

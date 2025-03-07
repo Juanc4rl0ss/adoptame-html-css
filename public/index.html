@@ -250,6 +250,16 @@
         </div>
     </div>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mensaje = localStorage.getItem("mensajeContacto");
+    if (mensaje) {
+      alert(mensaje); // Muestra el mensaje en un alert
+      localStorage.removeItem("mensajeContacto"); // Elimina el mensaje después de mostrarlo
+    }
+  });
+</script>
+
 </body>
 
 </html>
