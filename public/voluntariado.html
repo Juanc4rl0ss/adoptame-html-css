@@ -80,8 +80,6 @@
         <form
           id="voluntariado-form"
           class="mt-6 w-full mx-auto text-left grid grid-cols-2 gap-8"
-          action="informacion.html"
-          method="get"
         >
           <!-- Información Personal -->
           <fieldset class="border border-main-fuchsia p-4 rounded-lg mb-4 col-span-2 lg:col-span-1 h-full">
@@ -340,5 +338,45 @@
           </div>
       </div>
   </footer>
+  <script>
+    document.getElementById("voluntariado-form").addEventListener("submit", async (evento) => {
+      evento.preventDefault(); // Prevenir recarga de la página
+  
+      // Obtener los datos del formulario
+      const formData = new FormData(evento.target);
+      const data = {
+        nombre: formData.get("nombre"),
+        apellidos: formData.get("apellidos"),
+        telefono: formData.get("telefono"),
+        email: formData.get("email"),
+        dias_disponibles: formData.get("dias_disponibles"),
+        horario: formData.get("horario"),
+        experiencia: formData.get("experiencia"),
+        habilidades: formData.get("habilidades"),
+        area_interes: Array.from(document.querySelectorAll('input[name="area_interes"]:checked')).map(e => e.value), // Guarda como array
+        otro_interes: formData.get("otro_interes"),
+        motivo: formData.get("motivo")
+      };
+  
+      try {
+        const response = await fetch("http://localhost:3000/voluntariado", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+  
+        if (response.ok) {
+          localStorage.setItem("mensajeVoluntariado", "Tu solicitud ha sido enviada correctamente. Nos pondremos en contacto.");
+          window.location.href = "informacion.html"; // Redirige después de enviar
+        } else {
+          alert("Hubo un error al enviar la solicitud. Intenta de nuevo.");
+        }
+      } catch (error) {
+        console.error("Error en la solicitud:", error);
+        alert("Hubo un error en la conexión con el servidor.");
+      }
+    });
+  </script>
+  
   </body>
 </html>

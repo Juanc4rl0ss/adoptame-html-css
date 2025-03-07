@@ -126,6 +126,35 @@ app.post("/login", (req, res) => {
   }
 });
 
+// Ruta para el formulario de voluntariado
+app.post("/voluntariado", (req, res) => {
+  const { nombre, apellidos, telefono, email, dias_disponibles, horario, experiencia, habilidades, area_interes, otro_interes, motivo } = req.body;
+
+  console.log("Datos recibidos:", req.body); // Para depuración
+
+  let datos = cargarDatos();
+
+  // Guarda los datos del voluntario en la base de datos (archivo JSON)
+  datos.voluntarios.push({
+    nombre,
+    apellidos,
+    telefono,
+    email,
+    dias_disponibles,
+    horario,
+    experiencia,
+    habilidades,
+    area_interes,
+    otro_interes,
+    motivo,
+    fecha_registro: new Date().toISOString() // Guarda la fecha de envío
+  });
+
+  guardarDatos(datos);
+
+  res.json({ mensaje: "Solicitud de voluntariado enviada correctamente. Nos pondremos en contacto contigo." });
+});
+
 
 // Iniciar el servidor
 app.listen(PUERTO, () => {

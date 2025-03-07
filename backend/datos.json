@@ -1,6 +1,25 @@
 {
   "usuarios": [],
-  "voluntarios": [],
+  "voluntarios": [
+    {
+      "nombre": "Juan Carlos",
+      "apellidos": "Ayala Leoz",
+      "telefono": "608174045",
+      "email": "juan_c1985@hotmail.es",
+      "dias_disponibles": "7",
+      "horario": "mañana",
+      "experiencia": "si",
+      "habilidades": "sssssssssssssss",
+      "area_interes": [
+        "rescate",
+        "eventos",
+        "educacion"
+      ],
+      "otro_interes": "dddddddddddddddddd",
+      "motivo": "dddddddddddddddd",
+      "fecha_registro": "2025-03-07T08:29:59.348Z"
+    }
+  ],
   "adopciones": [],
   "mensajes": [
     {

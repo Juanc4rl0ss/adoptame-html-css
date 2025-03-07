@@ -261,6 +261,15 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mensaje = localStorage.getItem("mensajeVoluntariado");
+      if (mensaje) {
+        alert(mensaje); // Muestra el mensaje
+        localStorage.removeItem("mensajeVoluntariado"); // Borra el mensaje después de mostrarlo
+      }
+    });
+  </script>
 </body>
 
 </html>
